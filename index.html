@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bianka Villeneuve Notaire | Vos notaires à Alma</title>
+<meta name="description" content="Me Bianka Villeneuve &amp; Me Alexandre Demers-Bergeron, notaires au 401, avenue Du Pont Nord à Alma. Succession, régimes matrimoniaux, union libre, mandat en prévision de l’inaptitude, immobilier et corporatif.">
+<link rel="icon" href="/images/logo-bianka-villeneuve.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div data-ref="progRef" style="position:fixed;top:0;left:0;right:0;height:2px;background:#8c2f39;transform-origin:left;transform:scaleX(0);z-index:60"></div>
+
+<div style="position:fixed;inset:0;z-index:100;background:#8c2f39;display:flex;align-items:center;justify-content:center;transform:var(--curtainT);transition:var(--curtainTr);pointer-events:none">
+  <span style="font-family:'Instrument Serif',serif;font-size:clamp(48px,8vw,120px);color:#f4f1ea;font-style:italic">Vos notaires</span>
+</div>
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:50;background:var(--navBg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--navLine);transition:background .5s ease,border-color .5s ease">
+  <div style="max-width:1440px;margin:0 auto;padding:var(--navPad);display:flex;align-items:center;justify-content:space-between;gap:24px;transition:padding .5s ease">
+    <a class="hv1" href="#" data-action="goHome" style="display:flex;align-items:center;background:#ffffff;border-radius:6px;padding:4px 10px;transition:transform .4s">
+      <img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire" style="height:var(--logoH);width:auto;display:block;transition:height .5s ease">
+    </a>
+    <div data-if="wide">
+      <nav style="display:flex;align-items:center;gap:30px;font-size:13.5px;font-weight:400">
+        <a class="hv2" href="#equipe" data-action="navEquipe" style="color:#f4f1ea">L’équipe</a>
+        <a class="hv2" href="#services" data-action="navServices" style="color:#f4f1ea">Services</a>
+        <a class="hv2" href="#services-personnalises" data-action="navPerso" style="color:#f4f1ea">Services personnalisés</a>
+        <a class="hv2" href="#engagement" data-action="navEng" style="color:#f4f1ea">Engagement</a>
+        <a class="hv3" href="#nous-joindre" data-action="navContact" style="color:#0e121b;background:#f4f1ea;padding:12px 22px;border-radius:999px;font-weight:500;transition:all .3s">Nous joindre</a>
+      </nav>
+    </div>
+    <div data-if="narrow">
+      <button data-action="toggleMenu" style="background:#f4f1ea;color:#0e121b;border:0;border-radius:999px;padding:11px 20px;font-size:13px;font-weight:500;cursor:pointer"><span data-text="menuLabel"></span></button>
+    </div>
+  </div>
+</header>
+
+<div data-if="menuOpen">
+  <div style="position:fixed;inset:0;z-index:45;background:#0e121b;padding:120px 28px 40px;display:flex;flex-direction:column;justify-content:space-between;box-sizing:border-box">
+    <nav style="display:flex;flex-direction:column;font-family:'Instrument Serif',serif;font-size:44px;line-height:1.15">
+      <a href="#equipe" data-action="navEquipe" style="color:#f4f1ea;padding:8px 0;border-bottom:1px solid rgba(244,241,234,.12)">L’équipe</a>
+      <a href="#/bianka" data-action="goBianka" style="color:#f4f1ea;padding:8px 0 8px 24px;border-bottom:1px solid rgba(244,241,234,.12);font-size:28px;font-style:italic">Me Bianka Villeneuve</a>
+      <a href="#/alexandre" data-action="goAlex" style="color:#f4f1ea;padding:8px 0 8px 24px;border-bottom:1px solid rgba(244,241,234,.12);font-size:28px;font-style:italic">Me Alexandre Demers-Bergeron</a>
+      <a href="#services" data-action="navServices" style="color:#f4f1ea;padding:8px 0;border-bottom:1px solid rgba(244,241,234,.12)">Services</a>
+      <a href="#services-personnalises" data-action="navPerso" style="color:#f4f1ea;padding:8px 0;border-bottom:1px solid rgba(244,241,234,.12)">Services personnalisés</a>
+      <a href="#engagement" data-action="navEng" style="color:#f4f1ea;padding:8px 0;border-bottom:1px solid rgba(244,241,234,.12)">Engagement</a>
+      <a href="#nous-joindre" data-action="navContact" style="color:#e7b9b0;padding:8px 0">Nous joindre</a>
+    </nav>
+    <a href="tel:4186683118" style="font-family:'Geist Mono',monospace;font-size:15px;color:rgba(244,241,234,.75)">418-668-3118 · 401, avenue Du Pont Nord, Alma</a>
+  </div>
+</div>
+
+<div data-if="isHome">
+
+<section id="accueil" data-screen-label="01 Accueil" style="position:relative;min-height:100vh;padding:clamp(120px,16vh,170px) clamp(20px,4vw,56px) 40px;box-sizing:border-box;display:flex;flex-direction:column;max-width:1440px;margin:0 auto">
+  <div style="flex:1;display:grid;grid-template-columns:var(--heroCols);gap:clamp(32px,4vw,64px);align-items:end">
+    <div style="display:flex;flex-direction:column;gap:clamp(28px,4vh,48px);padding-bottom:12px">
+      <div data-reveal="up" data-delay="100" style="display:flex;align-items:center;gap:12px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:rgba(244,241,234,.7)">
+        <span style="width:8px;height:8px;border-radius:50%;background:#8c2f39"></span>Étude de notaires · Alma, Lac-St-Jean
+      </div>
+      <h1 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(76px,13.5vw,228px);line-height:.86;letter-spacing:-.035em">
+        <span style="display:block;overflow:hidden;padding-bottom:.04em"><span data-reveal="mask" data-delay="150" style="display:block">Vos</span></span>
+        <span style="display:block;overflow:hidden;padding-bottom:.08em"><span data-reveal="mask" data-delay="280" style="display:block;font-style:italic;color:#e7b9b0">notaires.</span></span>
+      </h1>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:28px 48px;align-items:end;border-top:1px solid rgba(244,241,234,.16);padding-top:28px">
+        <p data-reveal="up" data-delay="450" style="margin:0;font-family:'Instrument Serif',serif;font-size:clamp(24px,2.2vw,32px);line-height:1.2">Me Bianka Villeneuve <span style="color:#e7b9b0;font-style:italic">&amp;</span> Me Alexandre Demers-Bergeron</p>
+        <p data-reveal="up" data-delay="550" style="margin:0;font-size:16px;line-height:1.65;color:rgba(244,241,234,.72);font-weight:300;text-wrap:pretty">Loin d’être un long fleuve tranquille, la vie est jalonnée de petits et grands moments qui restent à jamais gravés dans notre mémoire.</p>
+      </div>
+      <div data-reveal="up" data-delay="650" style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="hv4" href="#nous-joindre" data-action="navContact" style="display:flex;align-items:center;gap:14px;background:#8c2f39;color:#f4f1ea;padding:18px 28px;border-radius:999px;font-size:15px;font-weight:500;transition:all .35s">Prendre rendez-vous <span>→</span></a>
+        <a class="hv5" href="tel:4186683118" style="display:flex;align-items:center;border:1px solid rgba(244,241,234,.3);color:#f4f1ea;padding:18px 28px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:14px;transition:all .35s">418-668-3118</a>
+      </div>
+    </div>
+    <div data-reveal="img" data-delay="200" style="position:relative;aspect-ratio:4/5;max-height:76vh;width:100%;overflow:hidden;border-radius:4px;background:#161b27">
+      <div data-ref="heroImgRef" style="position:absolute;inset:-8% 0">
+        <div style="position:absolute;inset:0;z-index:var(--z0);clip-path:var(--c0);transition:var(--ct0)"><img src="/images/local.jpg" alt="Enseigne du bureau, 401 avenue Du Pont Nord" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(var(--s0));transition:transform 6s cubic-bezier(.2,.7,.2,1)"></div>
+        <div style="position:absolute;inset:0;z-index:var(--z1);clip-path:var(--c1);transition:var(--ct1)"><img src="/images/bianka_alexandre.jpg" alt="Me Bianka Villeneuve et Me Alexandre Demers-Bergeron" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(var(--s1));transition:transform 6s cubic-bezier(.2,.7,.2,1)"></div>
+        <div style="position:absolute;inset:0;z-index:var(--z2);clip-path:var(--c2);transition:var(--ct2)"><img src="/images/equipe_bianka.jpg" alt="L’équipe du bureau" style="width:100%;height:100%;object-fit:cover;object-position:60% center;transform:scale(var(--s2));transition:transform 6s cubic-bezier(.2,.7,.2,1)"></div>
+      </div>
+      <div style="position:absolute;left:0;right:0;bottom:0;z-index:5;padding:22px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;background:linear-gradient(0deg,rgba(14,18,27,.75),rgba(14,18,27,0))">
+        <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase"><span data-text="slideCaption"></span></span>
+        <div style="display:flex;gap:6px">
+          <button data-action="go0" aria-label="Image 1" style="width:var(--w0);height:4px;border:0;border-radius:4px;padding:0;cursor:pointer;background:#f4f1ea;opacity:var(--o0);transition:all .6s ease"></button>
+          <button data-action="go1" aria-label="Image 2" style="width:var(--w1);height:4px;border:0;border-radius:4px;padding:0;cursor:pointer;background:#f4f1ea;opacity:var(--o1);transition:all .6s ease"></button>
+          <button data-action="go2" aria-label="Image 3" style="width:var(--w2);height:4px;border:0;border-radius:4px;padding:0;cursor:pointer;background:#f4f1ea;opacity:var(--o2);transition:all .6s ease"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-reveal="up" data-delay="800" style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:40px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,234,.6)">
+    <span>401, avenue Du Pont Nord — Alma (QC) G8B 5E4</span>
+    <span style="display:flex;align-items:center;gap:12px">Défiler <span style="width:1px;height:28px;background:#e7b9b0;animation:bvPulse 2s ease-in-out infinite;display:block"></span></span>
+  </div>
+</section>
+
+<div style="overflow:hidden;background:#8c2f39;padding:22px 0;transform:rotate(-1.2deg) scale(1.03);margin:40px 0">
+  <div style="display:flex;width:max-content;animation:bvTicker 40s linear infinite;font-family:'Instrument Serif',serif;font-size:clamp(28px,3vw,44px);white-space:nowrap;color:#f4f1ea">
+    <span style="padding:0 32px">Union libre</span><span>✳</span><span style="padding:0 32px;font-style:italic">Régimes matrimoniaux</span><span>✳</span><span style="padding:0 32px">Succession</span><span>✳</span><span style="padding:0 32px;font-style:italic">Mandat en prévision de l’inaptitude</span><span>✳</span><span style="padding:0 32px">Achat d’une maison</span><span>✳</span><span style="padding:0 32px;font-style:italic">Droit corporatif</span><span>✳</span>
+    <span style="padding:0 32px">Union libre</span><span>✳</span><span style="padding:0 32px;font-style:italic">Régimes matrimoniaux</span><span>✳</span><span style="padding:0 32px">Succession</span><span>✳</span><span style="padding:0 32px;font-style:italic">Mandat en prévision de l’inaptitude</span><span>✳</span><span style="padding:0 32px">Achat d’une maison</span><span>✳</span><span style="padding:0 32px;font-style:italic">Droit corporatif</span><span>✳</span>
+  </div>
+</div>
+
+<section id="intro" data-screen-label="02 Introduction" style="max-width:1440px;margin:0 auto;padding:clamp(80px,12vw,180px) clamp(20px,4vw,56px)">
+  <div data-reveal="up" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#e7b9b0;margin-bottom:36px">(01) — Notre approche</div>
+  <p data-ref="introRef" style="margin:0;font-family:'Instrument Serif',serif;font-size:clamp(34px,4.6vw,74px);line-height:1.08;letter-spacing:-.015em;max-width:1240px;text-wrap:pretty">
+    <span data-ref="fillRef" style="background-image:linear-gradient(#f4f1ea,#f4f1ea),linear-gradient(rgba(244,241,234,.22),rgba(244,241,234,.22));background-repeat:no-repeat;background-size:0% 100%,100% 100%;-webkit-background-clip:text;background-clip:text;color:transparent">Qu’il s’agisse de l’acquisition d’une première maison, d’un mariage, d’un démarrage d’entreprise, d’une naissance ou du décès d’un proche, ces différents événements nécessitent tous d’avoir recours à des services juridiques personnalisés.</span>
+  </p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(32px,4vw,64px);margin-top:clamp(64px,8vw,120px);padding-top:48px;border-top:1px solid rgba(244,241,234,.14)">
+    <div data-reveal="up" style="display:flex;flex-direction:column;gap:8px">
+      <span data-count="15" style="font-family:'Instrument Serif',serif;font-size:clamp(110px,12vw,180px);line-height:.8;color:#e7b9b0">15</span>
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,241,234,.66);margin-top:16px">années d’expérience en droit notarial</span>
+    </div>
+    <p data-reveal="up" data-delay="100" style="margin:0;font-size:16.5px;line-height:1.75;color:rgba(244,241,234,.78);font-weight:300;text-wrap:pretty">Pour des services exclusifs à prix compétitifs, faites appel en toute confiance à votre notaire, Me Bianka Villeneuve. Avec ses 15 années d’expérience en droit notarial, Me Bianka Villeneuve saura vous donner les meilleurs conseils en lien avec votre situation particulière.</p>
+    <p data-reveal="up" data-delay="200" style="margin:0;font-size:16.5px;line-height:1.75;color:rgba(244,241,234,.78);font-weight:300;text-wrap:pretty">Que ce soit en matière d’union libre, de régimes matrimoniaux, de succession, de mandat en prévision de l’inaptitude, de l’achat d’une maison ou en droit corporatif, Me Villeneuve vous offrira, ainsi qu’à vos proches, la tranquillité d’esprit. Toujours à l’écoute de sa clientèle, elle vous guidera parmi les différentes options qui s’offrent à vous.</p>
+    <p data-reveal="up" data-delay="300" style="margin:0;font-size:16.5px;line-height:1.75;color:rgba(244,241,234,.78);font-weight:300;text-wrap:pretty">Épaulée par ma collaboratrices d’expérience Nancy Cantin, Me Bianka Villeneuve vous offre un large éventail de services juridiques personnalisés et toujours adaptés à vos besoins. <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:21px;color:#f4f1ea;font-weight:400">Dans un monde où tout bouge vite, offrez-vous l’assurance d’une notaire et conseillère juridique professionnelle et attentionnée!</span></p>
+  </div>
+</section>
+
+<section id="equipe" data-screen-label="03 Équipe" style="background:#f4f1ea;color:#0e121b;padding:clamp(80px,11vw,160px) clamp(20px,4vw,56px);border-radius:28px 28px 0 0">
+  <div style="max-width:1440px;margin:0 auto">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:clamp(48px,6vw,90px)">
+      <div>
+        <div data-reveal="up" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#8c2f39;margin-bottom:24px">(02) — L’équipe</div>
+        <h2 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(56px,8vw,132px);line-height:.9;letter-spacing:-.03em">
+          <span style="display:block;overflow:hidden;padding-bottom:.06em"><span data-reveal="mask" style="display:block">Vos notaires</span></span>
+        </h2>
+      </div>
+      <p data-reveal="up" data-delay="150" style="margin:0;max-width:380px;font-size:16px;line-height:1.65;color:#4a4f5c">Me Bianka Villeneuve &amp; Me Alexandre Demers-Bergeron vous reçoivent au 401, avenue Du Pont Nord à Alma.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(24px,3vw,48px);align-items:start">
+      <a href="#/bianka" data-action="goBianka" data-reveal="up" style="display:block;color:#0e121b">
+        <div style="position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:#ebe6dc">
+          <img class="hv6" src="/images/Bianka.jpg" alt="Me Bianka Villeneuve" style="width:100%;height:100%;object-fit:cover;object-position:center 22%;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)">
+          <span style="position:absolute;top:18px;left:18px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;background:#f4f1ea;color:#0e121b;padding:7px 12px;border-radius:999px">01</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding-top:22px">
+          <div><div style="font-family:'Instrument Serif',serif;font-size:clamp(34px,3.4vw,52px);line-height:1">Me Bianka Villeneuve</div><div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#5b5f6b;margin-top:10px">Notaire et conseillère juridique</div></div>
+          <span class="hv7" style="flex:none;width:56px;height:56px;border-radius:50%;background:#0e121b;color:#f4f1ea;display:grid;place-items:center;font-size:20px;transition:all .4s">→</span>
+        </div>
+      </a>
+      <a href="#/alexandre" data-action="goAlex" data-reveal="up" data-delay="150" style="display:block;color:#0e121b;margin-top:var(--cardOffset)">
+        <div style="position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:#ebe6dc">
+          <img class="hv6" src="/images/Alexandre.jpg" alt="Me Alexandre Demers-Bergeron" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)">
+          <span style="position:absolute;top:18px;left:18px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.14em;background:#f4f1ea;color:#0e121b;padding:7px 12px;border-radius:999px">02</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding-top:22px">
+          <div><div style="font-family:'Instrument Serif',serif;font-size:clamp(34px,3.4vw,52px);line-height:1">Me Alexandre Demers-Bergeron</div><div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#5b5f6b;margin-top:10px">Notaire</div></div>
+          <span class="hv7" style="flex:none;width:56px;height:56px;border-radius:50%;background:#0e121b;color:#f4f1ea;display:grid;place-items:center;font-size:20px;transition:all .4s">→</span>
+        </div>
+      </a>
+    </div>
+    <div data-reveal="img" style="position:relative;margin-top:clamp(64px,8vw,120px);aspect-ratio:21/9;overflow:hidden;border-radius:4px;background:#ebe6dc">
+      <img src="/images/equipe_bianka.jpg" alt="L’équipe du bureau" style="width:100%;height:100%;object-fit:cover;object-position:center 35%">
+      <div style="position:absolute;left:0;bottom:0;padding:22px 26px;background:#f4f1ea;border-radius:0 4px 0 0;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase">L’équipe du bureau · Alma</div>
+    </div>
+  </div>
+</section>
+
+<section id="services" data-screen-label="04 Services" style="background:#f4f1ea;color:#0e121b;padding:0 clamp(20px,4vw,56px) clamp(80px,11vw,160px)">
+  <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,96px);align-items:start;border-top:1px solid rgba(14,18,27,.14);padding-top:clamp(64px,8vw,120px)">
+    <div style="position:sticky;top:110px">
+      <div data-reveal="up" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#8c2f39;margin-bottom:24px">(03) — Services</div>
+      <h2 style="margin:0 0 32px;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(48px,5.6vw,92px);line-height:.95;letter-spacing:-.025em">
+        <span style="display:block;overflow:hidden;padding-bottom:.06em"><span data-reveal="mask" style="display:block">Bien outillé</span></span>
+        <span style="display:block;overflow:hidden;padding-bottom:.08em"><span data-reveal="mask" data-delay="100" style="display:block;font-style:italic;color:#8c2f39">face à la tempête.</span></span>
+      </h2>
+      <p data-reveal="up" data-delay="200" style="margin:0;font-size:16px;line-height:1.75;color:#4a4f5c;text-wrap:pretty;max-width:560px">Me Bianka Villeneuve vous offre une gamme de services personnalisés et toujours bien adaptés à votre situation. Pour avoir la paix d’esprit en cas d’inaptitude, d’union libre ou en ce qui a trait à votre succession, consultez-nous sans tarder. Parce que la vie nous amène son lot de beaux moments, mais aussi, malheureusement, de mauvaises surprises et de grands bouleversements, mieux vaut être bien outillé pour faire face à la tempête. Pour vous protéger ainsi que protéger vos proches lors des moments plus difficiles, faites confiance à Me Bianka Villeneuve notaire et à son équipe.</p>
+    </div>
+    <div>
+      <div data-reveal="up" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#5b5f6b;padding-bottom:16px;border-bottom:1px solid rgba(14,18,27,.2)">Nos services :</div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">01</span>Célébration de mariage et contrat de mariage</div></div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">02</span>Contrat d’union libre</div></div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">03</span>Corporatif</div></div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">04</span>Homologation de mandat en cas d’inaptitude</div></div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">05</span>Garantie hypothécaire</div></div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">06</span>Immobilier (achat, vente, promesse d’achat)</div></div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">07</span>Mandant en prévision de l’inaptitude</div></div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">08</span>Ouverture de Régime de protection</div></div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">09</span>Recherches testamentaires</div></div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">10</span>Règlement de succession</div></div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">11</span>Testament</div></div>
+      <div data-reveal="up"><div class="hv8" style="display:flex;align-items:center;gap:20px;padding:22px 16px;border-bottom:1px solid rgba(14,18,27,.14);background-image:linear-gradient(#8c2f39,#8c2f39);background-repeat:no-repeat;background-size:0% 100%;transition:background-size .55s cubic-bezier(.7,0,.2,1),color .3s;font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.2;cursor:default"><span style="font-family:'Geist Mono',monospace;font-size:12px;opacity:.55;width:24px;flex:none">12</span>Vérification de testament</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services-personnalises" data-screen-label="05 Services personnalisés" data-ref="hRef" style="position:relative;background:#0e121b">
+  <div style="position:var(--hPos);top:0;height:var(--hHeight);overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:var(--hPad);box-sizing:border-box">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;padding:0 clamp(20px,4vw,56px);margin-bottom:clamp(28px,4vh,48px);max-width:1440px;width:100%;box-sizing:border-box;margin-left:auto;margin-right:auto">
+      <div>
+        <div style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#e7b9b0;margin-bottom:18px">(04) — Services personnalisés</div>
+        <h2 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(40px,4.8vw,76px);line-height:.95;letter-spacing:-.02em">Pour des services exclusifs <em style="color:#e7b9b0">à un prix compétitif!</em></h2>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;font-family:'Geist Mono',monospace;font-size:12px;color:rgba(244,241,234,.6)">
+        <span>Me Bianka Villeneuve, notaire</span>
+        <span style="width:120px;height:2px;background:rgba(244,241,234,.15);display:block;overflow:hidden"><span data-ref="hBarRef" style="display:block;height:100%;background:#e7b9b0;transform-origin:left;transform:scaleX(0)"></span></span>
+      </div>
+    </div>
+    <div data-ref="trackRef" style="display:flex;flex-direction:var(--hDir);gap:20px;padding:0 clamp(20px,4vw,56px);width:var(--trackW);box-sizing:border-box;will-change:transform">
+      <article style="flex:none;width:var(--cardW);min-height:var(--cardH);background:#161b27;border:1px solid rgba(244,241,234,.1);border-radius:6px;padding:clamp(26px,2.6vw,40px);box-sizing:border-box;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'Instrument Serif',serif;font-size:64px;line-height:.8;color:#e7b9b0;font-style:italic">01</span><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.55)">Union</span></div>
+        <h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(26px,2.2vw,34px);line-height:1.1">Célébration de mariage, contrat de mariage et d’union libre</h3>
+        <p style="margin:0;font-size:15px;line-height:1.7;color:rgba(244,241,234,.75);font-weight:300;text-wrap:pretty">Si vous êtes à la recherche d’une célébrante qualifiée qui saura tout mettre en œuvre pour que cette journée spéciale soit fidèle à votre image, contactez-nous sans tarder ! Il nous fera plaisir de discuter avec vous de vos besoins et de vous guider à travers les différentes étapes qui mènent à la concrétisation de votre union. Vous rêvez de vous unir dans un cadre paradisiaque ? Me Bianka Villeneuve pourra vous conseiller et, surtout, concevoir votre contrat de mariage pour assurer la validité de votre union.</p>
+      </article>
+      <article style="flex:none;width:var(--cardW);min-height:var(--cardH);background:#8c2f39;border-radius:6px;padding:clamp(26px,2.6vw,40px);box-sizing:border-box;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'Instrument Serif',serif;font-size:64px;line-height:.8;color:#f4f1ea;font-style:italic">02</span><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.8)">Entreprise</span></div>
+        <h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(26px,2.2vw,34px);line-height:1.1">Corporatif</h3>
+        <p style="margin:0;font-size:15px;line-height:1.7;color:#f4f1ea;font-weight:300;text-wrap:pretty">Outre les services notariaux de base dont vous devez nécessairement bénéficier lors de la formation d’une compagnie ou d’une société, Me Bianka Villeneuve offre également des formations en entreprise.</p>
+        <a class="hv9" href="#nous-joindre" data-action="navContact" style="margin-top:auto;align-self:flex-start;color:#8c2f39;background:#f4f1ea;padding:12px 20px;border-radius:999px;font-size:14px;font-weight:500">Informez-vous !</a>
+      </article>
+      <article style="flex:none;width:var(--cardW);min-height:var(--cardH);background:#161b27;border:1px solid rgba(244,241,234,.1);border-radius:6px;padding:clamp(26px,2.6vw,40px);box-sizing:border-box;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'Instrument Serif',serif;font-size:64px;line-height:.8;color:#e7b9b0;font-style:italic">03</span><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.55)">Protection</span></div>
+        <h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(24px,2vw,30px);line-height:1.1">Homologation de mandat en prévision de l’inaptitude et ouverture de Régime de protection</h3>
+        <p style="margin:0;font-size:14.5px;line-height:1.7;color:rgba(244,241,234,.75);font-weight:300;text-wrap:pretty">Bien évidemment, personne ne souhaite être privé de sa capacité de choisir et de décider de son sort. Malheureusement, nul n’est à l’abri d’un accident ou d’une maladie pouvant affecter ses capacités intellectuelles. La désignation d’un mandataire en cas d’inaptitude lorsqu’on est en pleine possession de ses moyens est encore la meilleure façon d’avoir la tranquillité d’esprit. Contactez-nous sans tarder pour obtenir des informations sur l’homologation de votre mandat en prévision d’inaptitude. Notre équipe saura également vous conseiller quant aux démarches inhérentes à l’ouverture de Régime de protection.</p>
+      </article>
+      <article style="flex:none;width:var(--cardW);min-height:var(--cardH);background:#f4f1ea;color:#0e121b;border-radius:6px;padding:clamp(26px,2.6vw,40px);box-sizing:border-box;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'Instrument Serif',serif;font-size:64px;line-height:.8;color:#8c2f39;font-style:italic">04</span><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#5b5f6b">Immobilier</span></div>
+        <h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(26px,2.2vw,34px);line-height:1.1">Immobilier (achat, vente, promesse d’achat) et garantie hypothécaire</h3>
+        <p style="margin:0;font-size:15px;line-height:1.7;color:#3d4250;text-wrap:pretty">Que vous souhaitiez vendre ou faire l’acquisition d’une propriété, Me Bianka Villeneuve vous offre les conseils juridiques dont vous avez besoin ainsi qu’une large gamme de services.</p>
+        <div style="margin-top:auto;aspect-ratio:16/10;overflow:hidden;border-radius:4px"><img src="/images/local.jpg" alt="Le bureau" style="width:100%;height:100%;object-fit:cover;object-position:center 30%"></div>
+      </article>
+      <article style="flex:none;width:var(--cardW);min-height:var(--cardH);background:#161b27;border:1px solid rgba(244,241,234,.1);border-radius:6px;padding:clamp(26px,2.6vw,40px);box-sizing:border-box;display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:'Instrument Serif',serif;font-size:64px;line-height:.8;color:#e7b9b0;font-style:italic">05</span><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.55)">Succession</span></div>
+        <h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(26px,2.2vw,34px);line-height:1.1">Testament</h3>
+        <p style="margin:0;font-size:15px;line-height:1.7;color:rgba(244,241,234,.75);font-weight:300;text-wrap:pretty">Avec un testament notarié, vos proches seront protégés, entre autres par la rédaction adéquate de clauses de nomination de tuteurs pour s’occuper de vos enfants mineurs à votre décès. Cela vous permettra également de protéger vos proches contre la saisie de certains biens légués, de différer la remise de l’héritage aux enfants à des âges variés en mettant en place une administration prolongée par le liquidateur, et d’empêcher autant que possible l’utilisation à mauvais escient de l’héritage reçu par vos proches.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="engagement" data-screen-label="06 Engagement" style="background:#ebe6dc;color:#0e121b;padding:clamp(80px,11vw,160px) clamp(20px,4vw,56px)">
+  <div style="max-width:1440px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:32px 64px;align-items:end;margin-bottom:clamp(48px,6vw,90px)">
+      <div>
+        <div data-reveal="up" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#8c2f39;margin-bottom:24px">(05) — Engagement</div>
+        <h2 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(52px,7vw,116px);line-height:.92;letter-spacing:-.03em">
+          <span style="display:block;overflow:hidden;padding-bottom:.06em"><span data-reveal="mask" style="display:block">Impliqués</span></span>
+          <span style="display:block;overflow:hidden;padding-bottom:.08em"><span data-reveal="mask" data-delay="100" style="display:block;font-style:italic;color:#8c2f39">dans notre milieu.</span></span>
+        </h2>
+      </div>
+      <p data-reveal="up" data-delay="150" style="margin:0;font-size:16.5px;line-height:1.75;color:#4a4f5c;text-wrap:pretty">Brillante communicatrice et ouverte sur le monde, Me Villeneuve s’est toujours impliquée dans son milieu.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(20px,2.4vw,36px);align-items:start">
+      <figure data-reveal="up" style="margin:0">
+        <div data-reveal="img" style="aspect-ratio:3/4;overflow:hidden;border-radius:4px;background:#ddd6ca"><img class="hv10" src="/images/ntribution.jpg" alt="La semaine des biscuits sourire" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)"></div>
+        <figcaption style="display:flex;justify-content:space-between;gap:12px;padding-top:14px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#4a4f5c"><span>La semaine des biscuits sourire</span><span>Tim Hortons</span></figcaption>
+      </figure>
+      <figure data-reveal="up" data-delay="120" style="margin:0;margin-top:var(--cardOffset)">
+        <div data-reveal="img" style="aspect-ratio:4/5;overflow:hidden;border-radius:4px;background:#ddd6ca"><img class="hv10" src="/images/contrib2.jpg" alt="Remise de chèque à la Fondation Ensemble ESCL" style="width:100%;height:100%;object-fit:cover;object-position:45% center;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)"></div>
+        <figcaption style="display:flex;justify-content:space-between;gap:12px;padding-top:14px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#4a4f5c"><span>Fondation Ensemble ESCL</span><span>4 500 $</span></figcaption>
+      </figure>
+      <figure data-reveal="up" data-delay="240" style="margin:0">
+        <div data-reveal="img" style="aspect-ratio:3/4;overflow:hidden;border-radius:4px;background:#ddd6ca"><img class="hv10" src="/images/Alexandre_Bergeron.jpg" alt="Me Alexandre Demers-Bergeron au souper bénéfice" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)"></div>
+        <figcaption style="display:flex;justify-content:space-between;gap:12px;padding-top:14px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#4a4f5c"><span>Souper bénéfice</span><span>Mai 2026</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div data-if="isBianka">
+<section data-screen-label="Profil Bianka" style="max-width:1440px;margin:0 auto;padding:clamp(120px,16vh,170px) clamp(20px,4vw,56px) clamp(64px,8vw,120px)">
+  <a class="hv2" href="#equipe" data-action="navEquipe" data-reveal="up" style="display:inline-flex;gap:10px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,241,234,.7);margin-bottom:40px">← L’équipe</a>
+  <div style="display:grid;grid-template-columns:var(--heroCols);gap:clamp(32px,5vw,80px);align-items:end">
+    <div>
+      <div data-reveal="up" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#e7b9b0;margin-bottom:28px">Notaire 01 / 02</div>
+      <h1 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(72px,11vw,184px);line-height:.86;letter-spacing:-.035em">
+        <span style="display:block;overflow:hidden;padding-bottom:.04em"><span data-reveal="mask" data-delay="100" style="display:block">Bianka</span></span>
+        <span style="display:block;overflow:hidden;padding-bottom:.08em"><span data-reveal="mask" data-delay="220" style="display:block;font-style:italic;color:#e7b9b0">Villeneuve</span></span>
+      </h1>
+      <p data-reveal="up" data-delay="350" style="margin:36px 0 0;font-family:'Instrument Serif',serif;font-size:clamp(24px,2.2vw,32px);line-height:1.3;max-width:620px">Plus qu’une notaire, Me Bianka Villeneuve est d’abord et avant tout une conseillère juridique expérimentée et aguerrie.</p>
+      <div data-reveal="up" data-delay="450" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:48px;border-top:1px solid rgba(244,241,234,.16);padding-top:24px">
+        <div><div style="font-family:'Instrument Serif',serif;font-size:44px;line-height:1;color:#e7b9b0">15</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,241,234,.66);margin-top:8px">années d’expérience</div></div>
+        <div><div style="font-family:'Instrument Serif',serif;font-size:44px;line-height:1;color:#e7b9b0">Laval</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,241,234,.66);margin-top:8px">droit notarial</div></div>
+        <div><div style="font-family:'Instrument Serif',serif;font-size:44px;line-height:1;color:#e7b9b0">Alma</div><div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,241,234,.66);margin-top:8px">ville natale</div></div>
+      </div>
+    </div>
+    <div data-reveal="img" data-delay="150" style="aspect-ratio:4/5;max-height:80vh;width:100%;overflow:hidden;border-radius:4px;background:#161b27"><img src="/images/Bianka.jpg" alt="Me Bianka Villeneuve" style="width:100%;height:100%;object-fit:cover;object-position:center 18%"></div>
+  </div>
+</section>
+<section style="background:#f4f1ea;color:#0e121b;padding:clamp(80px,11vw,160px) clamp(20px,4vw,56px);border-radius:28px 28px 0 0">
+  <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,96px);align-items:start">
+    <div style="position:sticky;top:110px">
+      <div data-reveal="up" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#8c2f39;margin-bottom:24px">À propos</div>
+      <p data-reveal="up" style="margin:0;font-family:'Instrument Serif',serif;font-size:clamp(32px,3.4vw,52px);line-height:1.1;letter-spacing:-.01em;text-wrap:pretty">Originaire d’Alma au Lac-St-Jean, Me Bianka Villeneuve notaire a choisi de revenir s’établir dans sa ville natale suite à des études en droit notariale à l’Université Laval de Québec.</p>
+      <div data-reveal="up" data-delay="100" style="margin-top:48px;border-top:1px solid rgba(14,18,27,.16)">
+        <div style="display:grid;grid-template-columns:130px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid rgba(14,18,27,.16);font-size:15px;line-height:1.5"><span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#8c2f39;padding-top:3px">13 ANS +</span><span>Festirame d’Alma — directrice des communications, puis présidente</span></div>
+        <div style="display:grid;grid-template-columns:130px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid rgba(14,18,27,.16);font-size:15px;line-height:1.5"><span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#8c2f39;padding-top:3px">FONDATRICE</span><span>Club Richelieu féminin d’Alma</span></div>
+        <div style="display:grid;grid-template-columns:130px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid rgba(14,18,27,.16);font-size:15px;line-height:1.5"><span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#8c2f39;padding-top:3px">2003–2009</span><span>C.A. de la Chambre de Commerce et d’Industrie Lac-St-Jean-Est</span></div>
+        <div style="display:grid;grid-template-columns:130px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid rgba(14,18,27,.16);font-size:15px;line-height:1.5"><span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#8c2f39;padding-top:3px">1 AN · 2 ANS</span><span>Comité d’éthique de l’UQAC · CORAMH</span></div>
+        <div style="display:grid;grid-template-columns:130px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid rgba(14,18,27,.16);font-size:15px;line-height:1.5"><span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;color:#8c2f39;padding-top:3px">DEPUIS 2007</span><span>C.A. de l’Association Professionnelles des Notaires du Québec (APNQ)</span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:24px;font-size:17px;line-height:1.8;color:#3d4250;text-wrap:pretty">
+      <p data-reveal="up" style="margin:0">Brillante communicatrice et ouverte sur le monde, Me Villeneuve s’est toujours impliquée dans son milieu. Impliquée au sein de Festirame d’Alma pendant plus de 13 ans, elle y a agi à titre de directrice des communications et a rapidement accédée au poste de présidente dudit festival.</p>
+      <p data-reveal="up" style="margin:0">Membre fondatrice du Club Richelieu féminin d’Alma, Me Villeneuve s’illustre par sa capacité à relever de nombreux défis. Son dynamisme contagieux et ses talents de communicatrice l’ont amenée à siéger au sein du conseil d’administration de la Chambre de Commerce et d’Industrie Lac-St-Jean-Est de 2003 à 2009.</p>
+      <p data-reveal="up" style="margin:0">Conseillère juridique pour le comité d’éthique de l’Université du Québec à Chicoutimi (UQAC) pendant 1 an, Me Bianka Villeneuve s’est également impliquée au sein de la Corporation de Recherche et d’Action sur les Maladies Héréditaires (CORAMH) pendant 2 ans.</p>
+      <p data-reveal="up" style="margin:0">De plus, depuis 2007, elle défend les intérêts des notaires du Québec en siégeant au conseil d’administration de l’Association Professionnelles des Notaires du Québec (APNQ).</p>
+      <div data-reveal="img" style="aspect-ratio:3/2;overflow:hidden;border-radius:4px;margin:16px 0;background:#ebe6dc"><img src="/images/contrib2.jpg" alt="Remise de chèque à la Fondation Ensemble ESCL" style="width:100%;height:100%;object-fit:cover"></div>
+      <p data-reveal="up" style="margin:0">Ayant pignon sur rue depuis quelques années sur l’avenue Du Pont Nord à Alma, le bureau de Me Bianka Villeneuve est à l’image de cette femme d’exception. La capacité d’écoute de Me Villeneuve, son approche personnalisée et son professionnalisme constituent ses principaux atouts.</p>
+      <p data-reveal="up" style="margin:0">Dans le meilleur comme dans le pire, elle saura vous guider vers les meilleures solutions qui s’offrent à vous. Plus qu’une notaire, Me Bianka Villeneuve est d’abord et avant tout une conseillère juridique expérimentée et aguerrie.</p>
+      <p data-reveal="up" style="margin:8px 0 0;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(30px,3vw,42px);line-height:1.15;color:#8c2f39">Faites confiance à Me Bianka Villeneuve, notaire !</p>
+    </div>
+  </div>
+</section>
+<section style="background:#f4f1ea;color:#0e121b;padding:0 clamp(20px,4vw,56px) clamp(80px,10vw,140px)">
+  <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px">
+    <a class="hv11" href="#nous-joindre" data-action="navContact" data-reveal="up" style="display:flex;flex-direction:column;justify-content:space-between;gap:48px;min-height:260px;padding:36px;background:#8c2f39;color:#f4f1ea;border-radius:6px;transition:transform .5s cubic-bezier(.2,.7,.2,1)">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase">Rendez-vous</span>
+      <span style="font-family:'Instrument Serif',serif;font-size:clamp(34px,3.4vw,52px);line-height:1">Prendre rendez-vous avec Me Villeneuve →</span>
+    </a>
+    <a class="hv11" href="#/alexandre" data-action="goAlex" data-reveal="up" data-delay="120" style="display:grid;grid-template-columns:1fr 140px;gap:24px;min-height:260px;padding:36px;background:#0e121b;color:#f4f1ea;border-radius:6px;transition:transform .5s cubic-bezier(.2,.7,.2,1)">
+      <span style="display:flex;flex-direction:column;justify-content:space-between;gap:48px"><span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#e7b9b0">Notaire suivant</span><span style="font-family:'Instrument Serif',serif;font-size:clamp(30px,3vw,44px);line-height:1.05">Me Alexandre Demers-Bergeron →</span></span>
+      <span style="overflow:hidden;border-radius:4px"><img src="/images/Alexandre.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></span>
+    </a>
+  </div>
+</section>
+</div>
+
+<div data-if="isAlex">
+<section data-screen-label="Profil Alexandre" style="max-width:1440px;margin:0 auto;padding:clamp(120px,16vh,170px) clamp(20px,4vw,56px) clamp(64px,8vw,120px)">
+  <a class="hv2" href="#equipe" data-action="navEquipe" data-reveal="up" style="display:inline-flex;gap:10px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,241,234,.7);margin-bottom:40px">← L’équipe</a>
+  <div style="display:grid;grid-template-columns:var(--heroCols);gap:clamp(32px,5vw,80px);align-items:end">
+    <div>
+      <div data-reveal="up" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#e7b9b0;margin-bottom:28px">Notaire 02 / 02</div>
+      <h1 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(64px,9.6vw,164px);line-height:.88;letter-spacing:-.035em">
+        <span style="display:block;overflow:hidden;padding-bottom:.04em"><span data-reveal="mask" data-delay="100" style="display:block">Alexandre</span></span>
+        <span style="display:block;overflow:hidden;padding-bottom:.08em"><span data-reveal="mask" data-delay="220" style="display:block;font-style:italic;color:#e7b9b0">Demers-Bergeron</span></span>
+      </h1>
+      <p data-reveal="up" data-delay="350" style="margin:36px 0 0;font-family:'Instrument Serif',serif;font-size:clamp(24px,2.2vw,32px);line-height:1.3;max-width:620px">Me Alexandre Demers-Bergeron, notaire, exerce aux côtés de Me Bianka Villeneuve au 401, avenue Du Pont Nord à Alma.</p>
+      <div data-reveal="up" data-delay="450" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:40px">
+        <a class="hv12" href="#nous-joindre" data-action="navContact" style="display:flex;align-items:center;gap:14px;background:#8c2f39;color:#f4f1ea;padding:18px 28px;border-radius:999px;font-size:15px;font-weight:500;transition:all .35s">Prendre rendez-vous →</a>
+        <a class="hv5" href="tel:4186683118" style="display:flex;align-items:center;border:1px solid rgba(244,241,234,.3);color:#f4f1ea;padding:18px 28px;border-radius:999px;font-family:'Geist Mono',monospace;font-size:14px">418-668-3118</a>
+      </div>
+    </div>
+    <div data-reveal="img" data-delay="150" style="aspect-ratio:4/5;max-height:80vh;width:100%;overflow:hidden;border-radius:4px;background:#161b27"><img src="/images/Alexandre.jpg" alt="Me Alexandre Demers-Bergeron" style="width:100%;height:100%;object-fit:cover;object-position:center 20%"></div>
+  </div>
+</section>
+<section style="background:#f4f1ea;color:#0e121b;padding:clamp(80px,11vw,160px) clamp(20px,4vw,56px);border-radius:28px 28px 0 0">
+  <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(40px,6vw,96px);align-items:start">
+    <div>
+      <div data-reveal="up" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#8c2f39;margin-bottom:24px">À propos</div>
+      <div data-reveal="up" style="border:1px dashed rgba(14,18,27,.3);border-radius:6px;padding:28px;font-family:'Geist Mono',monospace;font-size:13px;line-height:1.7;color:#5b5f6b">Biographie de Me Alexandre Demers-Bergeron — texte à fournir (formation, années de pratique, domaines privilégiés, implication).</div>
+      <div data-reveal="img" style="margin-top:32px;aspect-ratio:1/1;overflow:hidden;border-radius:4px;background:#ebe6dc"><img src="/images/bianka_alexandre.jpg" alt="Me Alexandre Demers-Bergeron et Me Bianka Villeneuve" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="padding-top:14px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#4a4f5c">Aux côtés de Me Bianka Villeneuve</div>
+    </div>
+    <div>
+      <div data-reveal="up" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#5b5f6b;padding-bottom:16px;border-bottom:1px solid rgba(14,18,27,.2)">Services du bureau</div>
+      <div data-reveal="up" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));column-gap:28px;font-family:'Instrument Serif',serif;font-size:22px;line-height:1.25">
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Célébration de mariage et contrat de mariage</span>
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Contrat d’union libre</span>
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Corporatif</span>
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Homologation de mandat en cas d’inaptitude</span>
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Garantie hypothécaire</span>
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Immobilier (achat, vente, promesse d’achat)</span>
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Mandant en prévision de l’inaptitude</span>
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Ouverture de Régime de protection</span>
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Recherches testamentaires</span>
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Règlement de succession</span>
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Testament</span>
+        <span style="padding:16px 0;border-bottom:1px solid rgba(14,18,27,.12)">Vérification de testament</span>
+      </div>
+      <div data-reveal="img" style="margin-top:40px;aspect-ratio:4/3;overflow:hidden;border-radius:4px;background:#ebe6dc"><img src="/images/Alexandre_Bergeron.jpg" alt="Me Alexandre Demers-Bergeron au souper bénéfice" style="width:100%;height:100%;object-fit:cover;object-position:center 22%"></div>
+      <div style="padding-top:14px;font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#4a4f5c">Souper bénéfice</div>
+    </div>
+  </div>
+</section>
+<section style="background:#f4f1ea;color:#0e121b;padding:0 clamp(20px,4vw,56px) clamp(80px,10vw,140px)">
+  <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px">
+    <a class="hv11" href="#nous-joindre" data-action="navContact" data-reveal="up" style="display:flex;flex-direction:column;justify-content:space-between;gap:48px;min-height:260px;padding:36px;background:#8c2f39;color:#f4f1ea;border-radius:6px;transition:transform .5s cubic-bezier(.2,.7,.2,1)">
+      <span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase">Rendez-vous</span>
+      <span style="font-family:'Instrument Serif',serif;font-size:clamp(34px,3.4vw,52px);line-height:1">Prendre rendez-vous avec Me Demers-Bergeron →</span>
+    </a>
+    <a class="hv11" href="#/bianka" data-action="goBianka" data-reveal="up" data-delay="120" style="display:grid;grid-template-columns:1fr 140px;gap:24px;min-height:260px;padding:36px;background:#0e121b;color:#f4f1ea;border-radius:6px;transition:transform .5s cubic-bezier(.2,.7,.2,1)">
+      <span style="display:flex;flex-direction:column;justify-content:space-between;gap:48px"><span style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#e7b9b0">Notaire</span><span style="font-family:'Instrument Serif',serif;font-size:clamp(30px,3vw,44px);line-height:1.05">Me Bianka Villeneuve →</span></span>
+      <span style="overflow:hidden;border-radius:4px"><img src="/images/Bianka.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 18%"></span>
+    </a>
+  </div>
+</section>
+</div>
+
+<section id="nous-joindre" data-screen-label="07 Nous joindre" style="background:#0e121b;padding:clamp(80px,11vw,160px) clamp(20px,4vw,56px) clamp(60px,8vw,100px)">
+  <div style="max-width:1440px;margin:0 auto">
+    <div data-reveal="up" style="font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#e7b9b0;margin-bottom:24px">Nous joindre</div>
+    <h2 style="margin:0 0 clamp(48px,6vw,90px);font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(56px,9vw,156px);line-height:.88;letter-spacing:-.035em">
+      <span style="display:block;overflow:hidden;padding-bottom:.04em"><span data-reveal="mask" style="display:block">Parlons de</span></span>
+      <span style="display:block;overflow:hidden;padding-bottom:.08em"><span data-reveal="mask" data-delay="100" style="display:block;font-style:italic;color:#e7b9b0">votre situation.</span></span>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(32px,4vw,64px);align-items:stretch">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:20px">
+        <div data-reveal="img" style="overflow:hidden;border-radius:4px;min-height:340px;background:#161b27"><img src="/images/local.jpg" alt="Enseigne du bureau" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;display:block"></div>
+        <div data-reveal="up" data-delay="100" style="display:flex;flex-direction:column;justify-content:space-between;gap:32px">
+          <div>
+            <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,241,234,.6);margin-bottom:12px">Adresse</div>
+            <p style="margin:0;font-family:'Instrument Serif',serif;font-size:26px;line-height:1.3">Me Bianka Villeneuve, notaire<br>401, avenue Du Pont Nord<br>Alma (QC)<br>G8B 5E4</p>
+          </div>
+          <div>
+            <div style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,241,234,.6);margin-bottom:12px">Téléphone</div>
+            <a class="hv13" href="tel:4186683118" style="font-family:'Instrument Serif',serif;font-size:clamp(38px,3.6vw,52px);color:#e7b9b0;line-height:1">418-668-3118</a>
+          </div>
+        </div>
+      </div>
+      <div data-reveal="up" data-delay="150" style="background:#161b27;border:1px solid rgba(244,241,234,.1);border-radius:6px;padding:clamp(26px,3.4vw,48px)">
+        <div data-if="notSent">
+          <form data-submit="submit" style="display:flex;flex-direction:column;gap:26px">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:26px">
+              <label style="display:flex;flex-direction:column;gap:8px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.66)">Votre nom (obligatoire)<input class="fc14" required style="border:0;border-bottom:1px solid rgba(244,241,234,.25);background:transparent;padding:10px 0;font-size:17px;color:#f4f1ea;outline:none;font-family:'Geist',sans-serif;letter-spacing:0;text-transform:none"></label>
+              <label style="display:flex;flex-direction:column;gap:8px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.66)">Votre email (obligatoire)<input class="fc14" type="email" required style="border:0;border-bottom:1px solid rgba(244,241,234,.25);background:transparent;padding:10px 0;font-size:17px;color:#f4f1ea;outline:none;font-family:'Geist',sans-serif;letter-spacing:0;text-transform:none"></label>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:8px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.66)">Sujet (obligatoire)<input class="fc14" required style="border:0;border-bottom:1px solid rgba(244,241,234,.25);background:transparent;padding:10px 0;font-size:17px;color:#f4f1ea;outline:none;font-family:'Geist',sans-serif;letter-spacing:0;text-transform:none"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,241,234,.66)">Votre message<textarea class="fc14" rows="5" style="border:0;border-bottom:1px solid rgba(244,241,234,.25);background:transparent;padding:10px 0;font-size:17px;color:#f4f1ea;outline:none;resize:vertical;font-family:'Geist',sans-serif;letter-spacing:0;text-transform:none"></textarea></label>
+            <button class="hv15" type="submit" style="align-self:flex-start;display:flex;align-items:center;gap:14px;background:#f4f1ea;color:#0e121b;border:0;border-radius:999px;padding:18px 30px;font-size:15px;font-weight:500;cursor:pointer;transition:all .35s">Envoyer <span>→</span></button>
+          </form>
+        </div>
+        <div data-if="sent">
+          <div style="min-height:340px;display:flex;flex-direction:column;justify-content:center;gap:16px">
+            <span style="font-family:'Instrument Serif',serif;font-style:italic;font-size:72px;line-height:1;color:#e7b9b0">Merci.</span>
+            <p style="margin:0;font-size:17px;line-height:1.7;color:rgba(244,241,234,.78)">Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-reveal="up" style="margin-top:20px;height:clamp(280px,32vw,420px);overflow:hidden;border-radius:6px;filter:grayscale(1) invert(.92) contrast(.9)">
+      <iframe title="Carte" src="https://maps.google.com/maps?q=401%20avenue%20Du%20Pont%20Nord%2C%20Alma%2C%20QC%20G8B%205E4&amp;z=15&amp;output=embed" style="width:100%;height:100%;border:0;display:block" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0e121b;border-top:1px solid rgba(244,241,234,.1);padding:clamp(56px,7vw,100px) clamp(20px,4vw,56px) 32px;overflow:hidden">
+  <div style="max-width:1440px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:40px;padding-bottom:56px">
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.7;color:rgba(244,241,234,.75)"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#e7b9b0;margin-bottom:6px">Bureau</span>401, Avenue Du Pont Nord<br>Alma, (Quebec)<br>G8B 5E4</div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#e7b9b0;margin-bottom:6px">Vos notaires</span><a class="hv2" href="#/bianka" data-action="goBianka" style="color:#f4f1ea">Me Bianka Villeneuve</a><a class="hv2" href="#/alexandre" data-action="goAlex" style="color:#f4f1ea">Me Alexandre Demers-Bergeron</a></div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px"><span style="font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#e7b9b0;margin-bottom:6px">Téléphone</span><a class="hv2" href="tel:4186683118" style="color:#f4f1ea;font-family:'Instrument Serif',serif;font-size:30px">(418) 668-3118</a></div>
+    </div>
+    <div style="display:flex;margin-bottom:40px"><span style="background:#ffffff;border-radius:6px;padding:8px 16px"><img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire" style="height:84px;width:auto;display:block"></span></div>
+    <div style="font-family:'Instrument Serif',serif;font-size:clamp(72px,15.5vw,250px);line-height:.8;letter-spacing:-.045em;white-space:nowrap;color:#f4f1ea">Vos <em style="color:#8c2f39">notaires</em></div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:40px;padding-top:24px;border-top:1px solid rgba(244,241,234,.1);font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,234,.55)">
+      <span>Copyright © 2026 · Bianka Villeneuve Notaire</span>
+      <a class="hv13" href="#" data-action="toTop" style="color:rgba(244,241,234,.75)">Retour en haut ↑</a>
+    </div>
+  </div>
+</footer>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
