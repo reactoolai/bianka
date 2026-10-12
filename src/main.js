@@ -2,7 +2,7 @@ import './style.css';
 
 const CONFIG = { autoplay: true, slideDelay: 6500 };
 const CAPTIONS = ['Le bureau \u00b7 401, avenue Du Pont Nord', 'Me Villeneuve & Me Demers-Bergeron', 'L\u2019\u00e9quipe du bureau'];
-const EASE = 'cubic-bezier(.25,1,.5,1)';
+const EASE = 'cubic-bezier(.3,1,.4,1)';
 
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const ref = (n) => document.querySelector(`[data-ref="${n}"]`);
@@ -15,11 +15,11 @@ let timer = null;
 function vals() {
   const { slide, prev, scrolled, menu, sent, narrow } = state;
   const v = {
-    navBg: scrolled || menu ? 'rgba(250,246,238,.92)' : 'rgba(250,246,238,0)',
-    navLine: scrolled ? 'rgba(26,26,26,.08)' : 'rgba(244,239,230,0)',
-    navPad: scrolled ? '16px clamp(20px,4vw,56px)' : '24px clamp(20px,4vw,56px)',
+    navBg: scrolled || menu ? 'rgba(245,240,230,.93)' : 'rgba(245,240,230,0)',
+    navLine: scrolled ? 'rgba(35,37,48,.08)' : 'rgba(35,37,48,0)',
+    navPad: scrolled ? '16px clamp(20px,4vw,56px)' : '22px clamp(20px,4vw,56px)',
     wide: !narrow, narrow, menuOpen: narrow && menu, menuLabel: menu ? 'Fermer' : 'Menu',
-    heroCols: narrow ? 'minmax(0,1fr)' : 'minmax(0,1fr) minmax(0,1fr)',
+    heroCols: narrow ? 'minmax(0,1fr)' : 'minmax(0,1.1fr) minmax(0,0.9fr)',
     slideCaption: CAPTIONS[slide],
     notSent: !sent, sent,
   };
@@ -29,8 +29,8 @@ function vals() {
     v['c' + i] = act || pv ? 'inset(0 0 0 0)' : 'inset(100% 0 0 0)';
     v['ct' + i] = act ? 'clip-path 1.4s cubic-bezier(.76,0,.24,1)' : 'none';
     v['s' + i] = act ? 1 : 1.1;
-    v['o' + i] = act ? 1 : 0.35;
-    v['w' + i] = act ? '36px' : '12px';
+    v['o' + i] = act ? 1 : 0.3;
+    v['w' + i] = act ? '32px' : '10px';
   }
   return v;
 }
@@ -44,7 +44,6 @@ function render() {
 
 function setState(patch) { Object.assign(state, patch); render(); }
 
-/* ---------- Slideshow ---------- */
 function startTimer() {
   clearInterval(timer);
   if (CONFIG.autoplay && document.querySelector('.hero-slides')) {
@@ -53,7 +52,6 @@ function startTimer() {
 }
 function goSlide(i) { if (i !== state.slide) { setState({ prev: state.slide, slide: i }); startTimer(); } }
 
-/* ---------- Scroll reveals ---------- */
 function setupReveal() {
   pending = pending.filter((el) => el.isConnected);
   $$('[data-reveal]').forEach((el) => {
@@ -70,8 +68,8 @@ function setupReveal() {
       el.style.transform = 'translateY(105%)';
       el._tr = `transform 1.05s ${EASE} ${d}ms`;
     } else {
-      el.style.opacity = '0'; el.style.transform = 'translateY(26px)';
-      el._tr = `opacity .95s ${EASE} ${d}ms, transform .95s ${EASE} ${d}ms`;
+      el.style.opacity = '0'; el.style.transform = 'translateY(24px)';
+      el._tr = `opacity .9s ${EASE} ${d}ms, transform .9s ${EASE} ${d}ms`;
     }
     pending.push(el);
   });
@@ -104,7 +102,6 @@ function count(el) {
   requestAnimationFrame(step);
 }
 
-/* ---------- Scroll ---------- */
 function tick() {
   const y = window.scrollY, vh = window.innerHeight;
   const cw = document.documentElement.clientWidth || window.innerWidth;
@@ -116,7 +113,6 @@ function tick() {
   if (ir && f) { const r = ir.getBoundingClientRect(); const pr = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.25))); f.style.backgroundSize = `${(pr * 100).toFixed(1)}% 100%, 100% 100%`; }
 }
 
-/* ---------- Actions ---------- */
 const actions = {
   toggleMenu: () => setState({ menu: !state.menu }),
   toTop: (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); },
