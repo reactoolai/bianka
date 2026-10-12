@@ -400,6 +400,62 @@ section { scroll-margin-top: 72px; }
 .footer-bottom a:hover { color: var(--paper); }
 
 /* ============================================================
+   PAGE HERO (sub-pages: equipe, services, etc.)
+   ============================================================ */
+.page-hero {
+  background: var(--paper); padding: clamp(110px, 14vh, 160px) clamp(20px, 4vw, 56px) clamp(48px, 6vw, 80px);
+  max-width: var(--max); margin: 0 auto;
+}
+.page-hero.on-ink { background: var(--ink); color: var(--paper); }
+.page-hero .back-link { color: var(--stone); }
+.page-hero .back-link:hover { color: var(--copper); }
+.page-hero.on-ink .back-link { color: rgba(245, 240, 230, 0.4); }
+.page-hero.on-ink .back-link:hover { color: var(--copper-light); }
+.page-title {
+  margin: 0; font-family: 'Playfair Display', serif; font-weight: 400;
+  font-size: clamp(48px, 7.5vw, 120px); line-height: 0.92; letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.page-title.on-ink { color: var(--paper); }
+.page-title em { font-style: italic; color: var(--copper); }
+.page-title.on-ink em { color: var(--copper-light); }
+.page-lead {
+  margin: 28px 0 0; font-family: 'Playfair Display', serif; font-size: clamp(19px, 1.8vw, 26px);
+  line-height: 1.35; max-width: 580px; font-weight: 400; color: var(--stone);
+}
+.page-lead.on-ink { color: rgba(245, 240, 230, 0.7); }
+
+/* ============================================================
+   PAGE BODY (content area for sub-pages)
+   ============================================================ */
+.page-body { background: var(--paper-soft); padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px) clamp(72px, 10vw, 140px); }
+.page-body .services-grid { max-width: var(--max); margin: 0 auto; }
+
+/* ============================================================
+   NAV PAGES (home page navigation cards)
+   ============================================================ */
+.nav-pages { background: var(--paper-soft); padding: clamp(56px, 7vw, 96px) clamp(20px, 4vw, 56px) clamp(72px, 10vw, 140px); }
+.nav-pages-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: clamp(20px, 2.4vw, 32px); margin-top: clamp(36px, 4vw, 52px);
+}
+.nav-page-card { display: block; color: var(--ink); border-radius: 10px; overflow: hidden; transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+.nav-page-card:hover { color: var(--ink); transform: translateY(-6px); box-shadow: 0 16px 40px rgba(35, 37, 48, 0.12); }
+.nav-page-card-wide { grid-column: 1 / -1; }
+.nav-page-card-wide .nav-page-img { aspect-ratio: 21/9; }
+.nav-page-img { position: relative; aspect-ratio: 4/3; overflow: hidden; background: var(--paper-warm); }
+.nav-page-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; transition: transform 1.4s var(--ease); }
+.nav-page-card:hover .nav-page-img img { transform: scale(1.06); }
+.nav-page-num {
+  position: absolute; top: 16px; left: 16px;
+  font-size: 11px; letter-spacing: 0.14em; font-weight: 600;
+  background: var(--paper); color: var(--ink); padding: 6px 12px; border-radius: 4px;
+}
+.nav-page-info { padding: 22px 4px 4px; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
+.nav-page-info h3 { margin: 0; font-family: 'Playfair Display', serif; font-weight: 400; font-size: clamp(24px, 2.2vw, 34px); line-height: 1; }
+.nav-page-info span { font-size: 12px; letter-spacing: 0.04em; color: var(--copper); font-weight: 600; white-space: nowrap; }
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 980px) {
@@ -408,6 +464,8 @@ section { scroll-margin-top: 72px; }
   .custom-row, .custom-row.reverse { grid-template-columns: 1fr; direction: ltr; }
   .services-aside { position: static; }
   .profile-aside { position: static; }
+  .nav-page-card-wide { grid-column: auto; }
+  .nav-page-card-wide .nav-page-img { aspect-ratio: 4/3; }
 }
 
 @media (max-width: 640px) {

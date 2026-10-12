@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prendre rendez-vous | Bianka Villeneuve Notaire — Alma</title>
+<meta name="description" content="Prenez rendez-vous avec Me Bianka Villeneuve ou Me Alexandre Demers-Bergeron, notaires au 401, avenue Du Pont Nord à Alma. 418-668-3118.">
+<link rel="icon" href="/images/logo-bianka-villeneuve.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="nav-header">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire"></a>
+    <nav class="nav-links" data-if="wide">
+      <a href="/equipe.html">L'équipe</a>
+      <a href="/services.html">Services</a>
+      <a href="/services-personnalises.html">Services personnalisés</a>
+      <a href="/engagement.html">Engagement</a>
+      <a href="/rendez-vous.html" class="nav-cta">Rendez-vous</a>
+    </nav>
+    <button data-action="toggleMenu" class="nav-menu-btn" data-if="narrow"><span data-text="menuLabel"></span></button>
+  </div>
+</header>
+
+<div data-if="menuOpen" class="mobile-menu">
+  <nav>
+    <a href="/equipe.html">L'équipe</a>
+    <a href="/bianka.html" class="sub-link">Me Bianka Villeneuve</a>
+    <a href="/alexandre.html" class="sub-link">Me Alexandre Demers-Bergeron</a>
+    <a href="/services.html">Services</a>
+    <a href="/services-personnalises.html">Services personnalisés</a>
+    <a href="/engagement.html">Engagement</a>
+    <a href="/rendez-vous.html">Rendez-vous</a>
+  </nav>
+  <a href="tel:4186683118" class="mobile-phone">418-668-3118 · 401, avenue Du Pont Nord, Alma</a>
+</div>
+
+<section class="page-hero on-ink">
+  <a href="/" class="back-link" data-reveal="up">← Accueil</a>
+  <p class="eyebrow on-ink" data-reveal="up">Rendez-vous</p>
+  <h1 class="page-title on-ink">
+    <span class="reveal-line"><span data-reveal="mask" data-delay="100">Parlons de</span></span>
+    <span class="reveal-line"><span data-reveal="mask" data-delay="200" style="font-style:italic;color:var(--copper-light)">votre situation.</span></span>
+  </h1>
+  <p data-reveal="up" data-delay="350" class="page-lead on-ink">Que ce soit pour un testament, une succession, un achat immobilier ou tout autre service notarial, nous sommes à votre écoute.</p>
+</section>
+
+<section class="contact" style="padding-top:clamp(56px,7vw,96px)">
+  <div class="contact-grid">
+    <div class="contact-left">
+      <div class="contact-photo" data-reveal="img"><img src="/images/local.jpg" alt="Enseigne du bureau"></div>
+      <div data-reveal="up" data-delay="100" class="contact-info">
+        <div><div class="info-label">Adresse</div><p class="info-text">Me Bianka Villeneuve, notaire<br>401, avenue Du Pont Nord<br>Alma (QC) G8B 5E4</p></div>
+        <div><div class="info-label">Téléphone</div><a href="tel:4186683118" class="info-phone">418-668-3118</a></div>
+      </div>
+    </div>
+    <div data-reveal="up" data-delay="140" class="contact-form-wrap">
+      <div data-if="notSent">
+        <form data-submit="submit" class="contact-form">
+          <div class="form-row">
+            <label>Votre nom (obligatoire)<input required class="form-input"></label>
+            <label>Votre email (obligatoire)<input type="email" required class="form-input"></label>
+          </div>
+          <label>Sujet (obligatoire)<input required class="form-input"></label>
+          <label>Votre message<textarea rows="5" class="form-input form-textarea"></textarea></label>
+          <button type="submit" class="btn-primary form-submit">Envoyer →</button>
+        </form>
+      </div>
+      <div data-if="sent" class="contact-sent">
+        <span class="sent-title">Merci.</span>
+        <p>Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.</p>
+      </div>
+    </div>
+  </div>
+  <div class="contact-map" data-reveal="up">
+    <iframe title="Carte" src="https://maps.google.com/maps?q=401%20avenue%20Du%20Pont%20Nord%2C%20Alma%2C%20QC%20G8B%205E4&amp;z=15&amp;output=embed" loading="lazy"></iframe>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col"><div class="footer-label">Bureau</div>401, Avenue Du Pont Nord<br>Alma, (Quebec) G8B 5E4</div>
+    <div class="footer-col"><div class="footer-label">Vos notaires</div><a href="/bianka.html">Me Bianka Villeneuve</a><a href="/alexandre.html">Me Alexandre Demers-Bergeron</a></div>
+    <div class="footer-col"><div class="footer-label">Téléphone</div><a href="tel:4186683118" class="footer-phone">(418) 668-3118</a></div>
+  </div>
+  <div class="footer-logo"><span class="footer-logo-bg"><img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire"></span></div>
+  <div class="footer-large">Vos <em>notaires</em></div>
+  <div class="footer-bottom">
+    <span>Copyright © 2026 · Bianka Villeneuve Notaire</span>
+    <a href="#" data-action="toTop">Retour en haut ↑</a>
+  </div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
