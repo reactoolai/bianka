@@ -17,15 +17,13 @@
 
 <header class="nav-header" id="navHeader">
   <div class="nav-inner">
-    <a href="#" data-action="goHome" class="nav-logo">
-      <img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire">
-    </a>
+    <a href="/" class="nav-logo"><img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire"></a>
     <nav class="nav-links" data-if="wide">
-      <a href="#equipe" data-action="navEquipe">L'équipe</a>
-      <a href="#services" data-action="navServices">Services</a>
-      <a href="#services-personnalises" data-action="navPerso">Services personnalisés</a>
-      <a href="#engagement" data-action="navEng">Engagement</a>
-      <a href="#nous-joindre" data-action="navContact" class="nav-cta">Nous joindre</a>
+      <a href="/#equipe">L'équipe</a>
+      <a href="/#services">Services</a>
+      <a href="/#services-personnalises">Services personnalisés</a>
+      <a href="/#engagement">Engagement</a>
+      <a href="/#nous-joindre" class="nav-cta">Nous joindre</a>
     </nav>
     <button data-action="toggleMenu" class="nav-menu-btn" data-if="narrow"><span data-text="menuLabel"></span></button>
   </div>
@@ -33,21 +31,16 @@
 
 <div data-if="menuOpen" class="mobile-menu">
   <nav>
-    <a href="#equipe" data-action="navEquipe">L'équipe</a>
-    <a href="#/bianka" data-action="goBianka" class="sub-link">Me Bianka Villeneuve</a>
-    <a href="#/alexandre" data-action="goAlex" class="sub-link">Me Alexandre Demers-Bergeron</a>
-    <a href="#services" data-action="navServices">Services</a>
-    <a href="#services-personnalises" data-action="navPerso">Services personnalisés</a>
-    <a href="#engagement" data-action="navEng">Engagement</a>
-    <a href="#nous-joindre" data-action="navContact">Nous joindre</a>
+    <a href="/#equipe">L'équipe</a>
+    <a href="/bianka.html" class="sub-link">Me Bianka Villeneuve</a>
+    <a href="/alexandre.html" class="sub-link">Me Alexandre Demers-Bergeron</a>
+    <a href="/#services">Services</a>
+    <a href="/#services-personnalises">Services personnalisés</a>
+    <a href="/#engagement">Engagement</a>
+    <a href="/#nous-joindre">Nous joindre</a>
   </nav>
   <a href="tel:4186683118" class="mobile-phone">418-668-3118 · 401, avenue Du Pont Nord, Alma</a>
 </div>
-
-<div class="page-transition" data-ref="curtainRef"></div>
-
-<!-- ============ PAGE ACCUEIL ============ -->
-<div data-if="isHome">
 
 <section id="accueil" class="hero">
   <div class="hero-inner">
@@ -55,20 +48,20 @@
       <p class="eyebrow" data-reveal="up" data-delay="80">Étude notariale · Alma, Lac-St-Jean</p>
       <h1 class="hero-title">
         <span class="reveal-line"><span data-reveal="mask" data-delay="120">Vos</span></span>
-        <span class="reveal-line"><span data-reveal="mask" data-delay="240" style="font-style:italic">notaires.</span></span>
+        <span class="reveal-line"><span data-reveal="mask" data-delay="240" style="font-style:italic;color:var(--c-accent)">notaires.</span></span>
       </h1>
       <div class="hero-meta">
         <p class="hero-names" data-reveal="up" data-delay="400">Me Bianka Villeneuve <span style="font-style:italic">&amp;</span> Me Alexandre Demers-Bergeron</p>
         <p class="hero-tagline" data-reveal="up" data-delay="500">Loin d'être un long fleuve tranquille, la vie est jalonnée de petits et grands moments qui restent à jamais gravés dans notre mémoire.</p>
       </div>
       <div class="hero-actions" data-reveal="up" data-delay="600">
-        <a href="#nous-joindre" data-action="navContact" class="btn-primary">Prendre rendez-vous</a>
+        <a href="#nous-joindre" class="btn-primary">Prendre rendez-vous</a>
         <a href="tel:4186683118" class="btn-outline">418-668-3118</a>
       </div>
     </div>
     <div class="hero-visual" data-reveal="img" data-delay="200">
       <div data-ref="heroImgRef" class="hero-slides">
-        <div class="slide" style="z-index:var(--z0);clip-path:var(--c0);transition:var(--ct0)"><img src="/images/local.jpg" alt="Enseigne du bureau, 401 avenue Du Pont Nord" style="transform:scale(var(--s0))"></div>
+        <div class="slide" style="z-index:var(--z0);clip-path:var(--c0);transition:var(--ct0)"><img src="/images/local.jpg" alt="Enseigne du bureau" style="transform:scale(var(--s0))"></div>
         <div class="slide" style="z-index:var(--z1);clip-path:var(--c1);transition:var(--ct1)"><img src="/images/bianka_alexandre.jpg" alt="Me Bianka Villeneuve et Me Alexandre Demers-Bergeron" style="transform:scale(var(--s1))"></div>
         <div class="slide" style="z-index:var(--z2);clip-path:var(--c2);transition:var(--ct2)"><img src="/images/equipe_bianka.jpg" alt="L'équipe du bureau" style="transform:scale(var(--s2))"></div>
       </div>
@@ -108,15 +101,15 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="section-label dark" data-reveal="up">(02) — L'équipe</div>
-        <h2 class="section-title dark">
+        <div class="section-label" data-reveal="up">(02) — L'équipe</div>
+        <h2 class="section-title">
           <span class="reveal-line"><span data-reveal="mask">Vos notaires</span></span>
         </h2>
       </div>
-      <p data-reveal="up" data-delay="150" class="section-subtitle dark">Me Bianka Villeneuve &amp; Me Alexandre Demers-Bergeron vous reçoivent au 401, avenue Du Pont Nord à Alma.</p>
+      <p data-reveal="up" data-delay="150" class="section-subtitle">Me Bianka Villeneuve &amp; Me Alexandre Demers-Bergeron vous reçoivent au 401, avenue Du Pont Nord à Alma.</p>
     </div>
     <div class="team-grid">
-      <a href="#/bianka" data-action="goBianka" data-reveal="up" class="team-card">
+      <a href="/bianka.html" data-reveal="up" class="team-card">
         <div class="team-photo">
           <img src="/images/Bianka.jpg" alt="Me Bianka Villeneuve" class="hover-zoom">
           <span class="team-badge">01</span>
@@ -127,7 +120,7 @@
           <span class="team-arrow">→</span>
         </div>
       </a>
-      <a href="#/alexandre" data-action="goAlex" data-reveal="up" data-delay="150" class="team-card" style="margin-top:var(--cardOffset)">
+      <a href="/alexandre.html" data-reveal="up" data-delay="150" class="team-card" style="margin-top:var(--cardOffset)">
         <div class="team-photo">
           <img src="/images/Alexandre.jpg" alt="Me Alexandre Demers-Bergeron" class="hover-zoom">
           <span class="team-badge">02</span>
@@ -150,12 +143,12 @@
   <div class="container">
     <div class="services-grid">
       <div class="services-aside">
-        <div class="section-label dark" data-reveal="up">(03) — Services</div>
-        <h2 class="section-title dark">
+        <div class="section-label" data-reveal="up">(03) — Services</div>
+        <h2 class="section-title">
           <span class="reveal-line"><span data-reveal="mask">Bien outillé</span></span>
-          <span class="reveal-line"><span data-reveal="mask" data-delay="100" style="font-style:italic;color:#7a2530">face à la tempête.</span></span>
+          <span class="reveal-line"><span data-reveal="mask" data-delay="100" style="font-style:italic;color:var(--c-accent)">face à la tempête.</span></span>
         </h2>
-        <p data-reveal="up" data-delay="200" class="section-body dark">Me Bianka Villeneuve vous offre une gamme de services personnalisés et toujours bien adaptés à votre situation. Pour avoir la paix d'esprit en cas d'inaptitude, d'union libre ou en ce qui a trait à votre succession, consultez-nous sans tarder. Parce que la vie nous amène son lot de beaux moments, mais aussi, malheureusement, de mauvaises surprises et de grands bouleversements, mieux vaut être bien outillé pour faire face à la tempête. Pour vous protéger ainsi que protéger vos proches lors des moments plus difficiles, faites confiance à Me Bianka Villeneuve notaire et à son équipe.</p>
+        <p data-reveal="up" data-delay="200" class="section-body">Me Bianka Villeneuve vous offre une gamme de services personnalisés et toujours bien adaptés à votre situation. Pour avoir la paix d'esprit en cas d'inaptitude, d'union libre ou en ce qui a trait à votre succession, consultez-nous sans tarder. Parce que la vie nous amène son lot de beaux moments, mais aussi, malheureusement, de mauvaises surprises et de grands bouleversements, mieux vaut être bien outillé pour faire face à la tempête.</p>
       </div>
       <div class="services-list">
         <div class="services-list-head" data-reveal="up">Nos services :</div>
@@ -177,10 +170,10 @@
 </section>
 
 <section id="services-personnalises" class="custom-services" data-ref="hRef">
-  <div class="custom-sticky" data-ref="trackWrapRef">
+  <div class="custom-sticky">
     <div class="custom-head">
       <div>
-        <div class="section-label accent">(04) — Services personnalisés</div>
+        <div class="section-label" style="color:var(--c-accent-soft)">(04) — Services personnalisés</div>
         <h2 class="custom-title">Pour des services exclusifs <em>à un prix compétitif!</em></h2>
       </div>
       <div class="custom-meta">
@@ -198,12 +191,12 @@
         <div class="card-top"><span class="card-num light">02</span><span class="card-tag light">Entreprise</span></div>
         <h3>Corporatif</h3>
         <p>Outre les services notariaux de base dont vous devez nécessairement bénéficier lors de la formation d'une compagnie ou d'une société, Me Bianka Villeneuve offre également des formations en entreprise.</p>
-        <a href="#nous-joindre" data-action="navContact" class="card-link">Informez-vous !</a>
+        <a href="#nous-joindre" class="card-link">Informez-vous !</a>
       </article>
       <article class="custom-card dark-card">
         <div class="card-top"><span class="card-num">03</span><span class="card-tag">Protection</span></div>
         <h3>Homologation de mandat en prévision de l'inaptitude et ouverture de Régime de protection</h3>
-        <p>Bien évidemment, personne ne souhaite être privé de sa capacité de choisir et de décider de son sort. Malheureusement, nul n'est à l'abri d'un accident ou d'une maladie pouvant affecter ses capacités intellectuelles. La désignation d'un mandataire en cas d'inaptitude lorsqu'on est en pleine possession de ses moyens est encore la meilleure façon d'avoir la tranquillité d'esprit. Contactez-nous sans tarder pour obtenir des informations sur l'homologation de votre mandat en prévision d'inaptitude. Notre équipe saura également vous conseiller quant aux démarches inhérentes à l'ouverture de Régime de protection.</p>
+        <p>Bien évidemment, personne ne souhaite être privé de sa capacité de choisir et de décider de son sort. Malheureusement, nul n'est à l'abri d'un accident ou d'une maladie pouvant affecter ses capacités intellectuelles. La désignation d'un mandataire en cas d'inaptitude lorsqu'on est en pleine possession de ses moyens est encore la meilleure façon d'avoir la tranquillité d'esprit. Contactez-nous sans tarder.</p>
       </article>
       <article class="custom-card light-card">
         <div class="card-top"><span class="card-num accent">04</span><span class="card-tag dark">Immobilier</span></div>
@@ -214,7 +207,7 @@
       <article class="custom-card dark-card">
         <div class="card-top"><span class="card-num">05</span><span class="card-tag">Succession</span></div>
         <h3>Testament</h3>
-        <p>Avec un testament notarié, vos proches seront protégés, entre autres par la rédaction adéquate de clauses de nomination de tuteurs pour s'occuper de vos enfants mineurs à votre décès. Cela vous permettra également de protéger vos proches contre la saisie de certains biens légués, de différer la remise de l'héritage aux enfants à des âges variés en mettant en place une administration prolongée par le liquidateur, et d'empêcher autant que possible l'utilisation à mauvais escient de l'héritage reçu par vos proches.</p>
+        <p>Avec un testament notarié, vos proches seront protégés, entre autres par la rédaction adéquate de clauses de nomination de tuteurs pour s'occuper de vos enfants mineurs à votre décès. Cela vous permettra également de protéger vos proches contre la saisie de certains biens légués, de différer la remise de l'héritage aux enfants à des âges variés en mettant en place une administration prolongée par le liquidateur.</p>
       </article>
     </div>
   </div>
@@ -224,13 +217,13 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="section-label dark" data-reveal="up">(05) — Engagement</div>
-        <h2 class="section-title dark">
+        <div class="section-label" data-reveal="up">(05) — Engagement</div>
+        <h2 class="section-title">
           <span class="reveal-line"><span data-reveal="mask">Impliqués</span></span>
-          <span class="reveal-line"><span data-reveal="mask" data-delay="100" style="font-style:italic;color:#7a2530">dans notre milieu.</span></span>
+          <span class="reveal-line"><span data-reveal="mask" data-delay="100" style="font-style:italic;color:var(--c-accent)">dans notre milieu.</span></span>
         </h2>
       </div>
-      <p data-reveal="up" data-delay="150" class="section-subtitle dark">Brillante communicatrice et ouverte sur le monde, Me Villeneuve s'est toujours impliquée dans son milieu.</p>
+      <p data-reveal="up" data-delay="150" class="section-subtitle">Brillante communicatrice et ouverte sur le monde, Me Villeneuve s'est toujours impliquée dans son milieu.</p>
     </div>
     <div class="engagement-grid">
       <figure data-reveal="up" class="engagement-figure">
@@ -249,148 +242,12 @@
   </div>
 </section>
 
-</div>
-
-<!-- ============ PAGE BIANKA ============ -->
-<div data-if="isBianka">
-<section class="profile-hero">
-  <a href="#equipe" data-action="navEquipe" data-reveal="up" class="back-link">← L'équipe</a>
-  <div class="profile-hero-inner">
-    <div class="profile-hero-text">
-      <div class="section-label accent" data-reveal="up">Notaire 01 / 02</div>
-      <h1 class="profile-title">
-        <span class="reveal-line"><span data-reveal="mask" data-delay="100">Bianka</span></span>
-        <span class="reveal-line"><span data-reveal="mask" data-delay="220" style="font-style:italic;color:#c4a99e">Villeneuve</span></span>
-      </h1>
-      <p data-reveal="up" data-delay="350" class="profile-tagline">Plus qu'une notaire, Me Bianka Villeneuve est d'abord et avant tout une conseillère juridique expérimentée et aguerrie.</p>
-      <div data-reveal="up" data-delay="450" class="profile-stats">
-        <div><div class="stat-num">15</div><div class="stat-cap">années d'expérience</div></div>
-        <div><div class="stat-num">Laval</div><div class="stat-cap">droit notarial</div></div>
-        <div><div class="stat-num">Alma</div><div class="stat-cap">ville natale</div></div>
-      </div>
-    </div>
-    <div class="profile-hero-photo" data-reveal="img" data-delay="150"><img src="/images/Bianka.jpg" alt="Me Bianka Villeneuve"></div>
-  </div>
-</section>
-<section class="profile-body">
-  <div class="container">
-    <div class="profile-grid">
-      <div class="profile-aside">
-        <div class="section-label dark" data-reveal="up">À propos</div>
-        <p data-reveal="up" class="profile-lead">Originaire d'Alma au Lac-St-Jean, Me Bianka Villeneuve notaire a choisi de revenir s'établir dans sa ville natale suite à des études en droit notariale à l'Université Laval de Québec.</p>
-        <div data-reveal="up" data-delay="100" class="profile-timeline">
-          <div class="timeline-item"><span class="timeline-date">13 ANS +</span><span>Festirame d'Alma — directrice des communications, puis présidente</span></div>
-          <div class="timeline-item"><span class="timeline-date">FONDATRICE</span><span>Club Richelieu féminin d'Alma</span></div>
-          <div class="timeline-item"><span class="timeline-date">2003–2009</span><span>C.A. de la Chambre de Commerce et d'Industrie Lac-St-Jean-Est</span></div>
-          <div class="timeline-item"><span class="timeline-date">1 AN · 2 ANS</span><span>Comité d'éthique de l'UQAC · CORAMH</span></div>
-          <div class="timeline-item"><span class="timeline-date">DEPUIS 2007</span><span>C.A. de l'Association Professionnelles des Notaires du Québec (APNQ)</span></div>
-        </div>
-      </div>
-      <div class="profile-text">
-        <p data-reveal="up">Brillante communicatrice et ouverte sur le monde, Me Villeneuve s'est toujours impliquée dans son milieu. Impliquée au sein de Festirame d'Alma pendant plus de 13 ans, elle y a agi à titre de directrice des communications et a rapidement accédée au poste de présidente dudit festival.</p>
-        <p data-reveal="up">Membre fondatrice du Club Richelieu féminin d'Alma, Me Villeneuve s'illustre par sa capacité à relever de nombreux défis. Son dynamisme contagieux et ses talents de communicatrice l'ont amenée à siéger au sein du conseil d'administration de la Chambre de Commerce et d'Industrie Lac-St-Jean-Est de 2003 à 2009.</p>
-        <p data-reveal="up">Conseillère juridique pour le comité d'éthique de l'Université du Québec à Chicoutimi (UQAC) pendant 1 an, Me Bianka Villeneuve s'est également impliquée au sein de la Corporation de Recherche et d'Action sur les Maladies Héréditaires (CORAMH) pendant 2 ans.</p>
-        <p data-reveal="up">De plus, depuis 2007, elle défend les intérêts des notaires du Québec en siégeant au conseil d'administration de l'Association Professionnelles des Notaires du Québec (APNQ).</p>
-        <div class="profile-text-image" data-reveal="img"><img src="/images/contrib2.jpg" alt="Remise de chèque à la Fondation Ensemble ESCL"></div>
-        <p data-reveal="up">Ayant pignon sur rue depuis quelques années sur l'avenue Du Pont Nord à Alma, le bureau de Me Bianka Villeneuve est à l'image de cette femme d'exception. La capacité d'écoute de Me Villeneuve, son approche personnalisée et son professionnalisme constituent ses principaux atouts.</p>
-        <p data-reveal="up">Dans le meilleur comme dans le pire, elle saura vous guider vers les meilleures solutions qui s'offrent à vous. Plus qu'une notaire, Me Bianka Villeneuve est d'abord et avant tout une conseillère juridique expérimentée et aguerrie.</p>
-        <p data-reveal="up" class="profile-quote">Faites confiance à Me Bianka Villeneuve, notaire !</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="profile-cta">
-  <div class="container">
-    <div class="cta-grid">
-      <a href="#nous-joindre" data-action="navContact" data-reveal="up" class="cta-card accent">
-        <span class="cta-label">Rendez-vous</span>
-        <span class="cta-text">Prendre rendez-vous avec Me Villeneuve →</span>
-      </a>
-      <a href="#/alexandre" data-action="goAlex" data-reveal="up" data-delay="120" class="cta-card dark">
-        <span class="cta-label accent">Notaire suivant</span>
-        <span class="cta-text">Me Alexandre Demers-Bergeron →</span>
-        <span class="cta-thumb"><img src="/images/Alexandre.jpg" alt=""></span>
-      </a>
-    </div>
-  </div>
-</section>
-</div>
-
-<!-- ============ PAGE ALEXANDRE ============ -->
-<div data-if="isAlex">
-<section class="profile-hero">
-  <a href="#equipe" data-action="navEquipe" data-reveal="up" class="back-link">← L'équipe</a>
-  <div class="profile-hero-inner">
-    <div class="profile-hero-text">
-      <div class="section-label accent" data-reveal="up">Notaire 02 / 02</div>
-      <h1 class="profile-title">
-        <span class="reveal-line"><span data-reveal="mask" data-delay="100">Alexandre</span></span>
-        <span class="reveal-line"><span data-reveal="mask" data-delay="220" style="font-style:italic;color:#c4a99e">Demers-Bergeron</span></span>
-      </h1>
-      <p data-reveal="up" data-delay="350" class="profile-tagline">Me Alexandre Demers-Bergeron, notaire, exerce aux côtés de Me Bianka Villeneuve au 401, avenue Du Pont Nord à Alma.</p>
-      <div data-reveal="up" data-delay="450" class="profile-actions">
-        <a href="#nous-joindre" data-action="navContact" class="btn-primary">Prendre rendez-vous →</a>
-        <a href="tel:4186683118" class="btn-outline">418-668-3118</a>
-      </div>
-    </div>
-    <div class="profile-hero-photo" data-reveal="img" data-delay="150"><img src="/images/Alexandre.jpg" alt="Me Alexandre Demers-Bergeron"></div>
-  </div>
-</section>
-<section class="profile-body">
-  <div class="container">
-    <div class="profile-grid">
-      <div class="profile-aside">
-        <div class="section-label dark" data-reveal="up">À propos</div>
-        <div data-reveal="up" class="profile-placeholder">Biographie de Me Alexandre Demers-Bergeron — texte à fournir (formation, années de pratique, domaines privilégiés, implication).</div>
-        <div class="profile-aside-image" data-reveal="img"><img src="/images/bianka_alexandre.jpg" alt="Me Alexandre Demers-Bergeron et Me Bianka Villeneuve"></div>
-        <div class="profile-aside-caption">Aux côtés de Me Bianka Villeneuve</div>
-      </div>
-      <div class="profile-text">
-        <div class="section-label dark" data-reveal="up">Services du bureau</div>
-        <div data-reveal="up" class="profile-services">
-          <span>Célébration de mariage et contrat de mariage</span>
-          <span>Contrat d'union libre</span>
-          <span>Corporatif</span>
-          <span>Homologation de mandat en cas d'inaptitude</span>
-          <span>Garantie hypothécaire</span>
-          <span>Immobilier (achat, vente, promesse d'achat)</span>
-          <span>Mandant en prévision de l'inaptitude</span>
-          <span>Ouverture de Régime de protection</span>
-          <span>Recherches testamentaires</span>
-          <span>Règlement de succession</span>
-          <span>Testament</span>
-          <span>Vérification de testament</span>
-        </div>
-        <div class="profile-text-image wide" data-reveal="img"><img src="/images/Alexandre_Bergeron.jpg" alt="Me Alexandre Demers-Bergeron au souper bénéfice"></div>
-        <div class="profile-aside-caption">Souper bénéfice</div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="profile-cta">
-  <div class="container">
-    <div class="cta-grid">
-      <a href="#nous-joindre" data-action="navContact" data-reveal="up" class="cta-card accent">
-        <span class="cta-label">Rendez-vous</span>
-        <span class="cta-text">Prendre rendez-vous avec Me Demers-Bergeron →</span>
-      </a>
-      <a href="#/bianka" data-action="goBianka" data-reveal="up" data-delay="120" class="cta-card dark">
-        <span class="cta-label accent">Notaire</span>
-        <span class="cta-text">Me Bianka Villeneuve →</span>
-        <span class="cta-thumb"><img src="/images/Bianka.jpg" alt=""></span>
-      </a>
-    </div>
-  </div>
-</section>
-</div>
-
-<!-- ============ NOUS JOINDRE ============ -->
 <section id="nous-joindre" class="contact">
   <div class="container">
-    <div class="section-label accent" data-reveal="up">Nous joindre</div>
+    <div class="section-label" data-reveal="up">Nous joindre</div>
     <h2 class="section-title">
       <span class="reveal-line"><span data-reveal="mask">Parlons de</span></span>
-      <span class="reveal-line"><span data-reveal="mask" data-delay="100" style="font-style:italic;color:#c4a99e">votre situation.</span></span>
+      <span class="reveal-line"><span data-reveal="mask" data-delay="100" style="font-style:italic;color:var(--c-accent-soft)">votre situation.</span></span>
     </h2>
     <div class="contact-grid">
       <div class="contact-left">
@@ -439,17 +296,15 @@
       </div>
       <div class="footer-col">
         <div class="footer-label">Vos notaires</div>
-        <a href="#/bianka" data-action="goBianka">Me Bianka Villeneuve</a>
-        <a href="#/alexandre" data-action="goAlex">Me Alexandre Demers-Bergeron</a>
+        <a href="/bianka.html">Me Bianka Villeneuve</a>
+        <a href="/alexandre.html">Me Alexandre Demers-Bergeron</a>
       </div>
       <div class="footer-col">
         <div class="footer-label">Téléphone</div>
         <a href="tel:4186683118" class="footer-phone">(418) 668-3118</a>
       </div>
     </div>
-    <div class="footer-logo">
-      <span class="footer-logo-bg"><img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire"></span>
-    </div>
+    <div class="footer-logo"><span class="footer-logo-bg"><img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire"></span></div>
     <div class="footer-large">Vos <em>notaires</em></div>
     <div class="footer-bottom">
       <span>Copyright © 2026 · Bianka Villeneuve Notaire</span>

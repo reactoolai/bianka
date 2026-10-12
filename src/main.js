@@ -1,33 +1,29 @@
 import './style.css';
 
 const CONFIG = { autoplay: true, slideDelay: 6000 };
-const CAPTIONS = ['Le bureau · 401, avenue Du Pont Nord', 'Me Villeneuve & Me Demers-Bergeron', 'L\u2019\u00e9quipe du bureau'];
+const CAPTIONS = ['Le bureau \u00b7 401, avenue Du Pont Nord', 'Me Villeneuve & Me Demers-Bergeron', 'L\u2019\u00e9quipe du bureau'];
 const EASE = 'cubic-bezier(.22,1,.36,1)';
 
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const ref = (n) => document.querySelector(`[data-ref="${n}"]`);
 const rootStyle = document.documentElement.style;
 
-const state = { page: 'accueil', slide: 0, prev: 2, scrolled: false, menu: false, sent: false, narrow: false, stack: false, curtain: 0 };
+const state = { slide: 0, prev: 2, scrolled: false, menu: false, sent: false, narrow: false };
 let pending = [];
 let hDist = 0;
 let timer = null;
 
 function vals() {
-  const { page, slide, prev, scrolled, menu, sent, narrow, stack, curtain } = state;
+  const { slide, prev, scrolled, menu, sent, narrow } = state;
   const v = {
-    isHome: page === 'accueil', isBianka: page === 'bianka', isAlex: page === 'alexandre',
-    navBg: scrolled || menu ? 'rgba(28,31,38,.88)' : 'rgba(28,31,38,0)',
-    navLine: scrolled ? 'rgba(245,242,236,.08)' : 'rgba(245,242,236,0)',
+    navBg: scrolled || menu ? 'rgba(250,248,243,.9)' : 'rgba(250,248,243,0)',
+    navLine: scrolled ? 'rgba(42,46,56,.08)' : 'rgba(42,46,56,0)',
     navPad: scrolled ? '16px clamp(20px,4vw,56px)' : '22px clamp(20px,4vw,56px)',
     wide: !narrow, narrow, menuOpen: narrow && menu, menuLabel: menu ? 'Fermer' : 'Menu',
-    curtainT: curtain === 1 ? 'translateY(0)' : curtain === 2 ? 'translateY(-100%)' : 'translateY(100%)',
-    curtainTr: curtain === 0 ? 'none' : 'transform .6s cubic-bezier(.76,0,.24,1)',
-    heroCols: stack ? 'minmax(0,1fr)' : narrow ? 'minmax(0,1.1fr) minmax(0,.9fr)' : 'minmax(0,1.15fr) minmax(0,.85fr)',
-    cardOffset: narrow ? '0px' : '100px',
+    heroCols: narrow ? 'minmax(0,1.1fr) minmax(0,.9fr)' : 'minmax(0,1.15fr) minmax(0,.85fr)',
     slideCaption: CAPTIONS[slide],
     hPos: narrow ? 'relative' : 'sticky', hHeight: narrow ? 'auto' : '100vh',
-    trackW: narrow ? '100%' : 'max-content',
+    hDir: narrow ? 'column' : 'row', trackW: narrow ? '100%' : 'max-content',
     cardW: narrow ? '100%' : 'clamp(340px,30vw,460px)', cardH: narrow ? 'auto' : 'min(60vh,580px)',
     notSent: !sent, sent,
   };
@@ -59,7 +55,7 @@ function startTimer() {
 }
 function goSlide(i) { if (i !== state.slide) { setState({ prev: state.slide, slide: i }); startTimer(); } }
 
-/* ---------- Scroll reveals (subtle) ---------- */
+/* ---------- Scroll reveals ---------- */
 function setupReveal() {
   pending = pending.filter((el) => el.isConnected);
   $$('[data-reveal]').forEach((el) => {
@@ -70,10 +66,7 @@ function setupReveal() {
     if (t === 'img') {
       el.style.clipPath = 'inset(100% 0 0 0)';
       const im = el.querySelector('img');
-      if (im) {
-        im.style.scale = '1.15';
-        if (!im._tr) { im._tr = true; im.style.transition = (im.style.transition ? im.style.transition + ',' : '') + `scale 1.5s ${EASE} ${d}ms`; }
-      }
+      if (im) { im.style.scale = '1.15'; if (!im._tr) { im._tr = true; im.style.transition = (im.style.transition ? im.style.transition + ',' : '') + `scale 1.5s ${EASE} ${d}ms`; } }
       el._tr = `clip-path 1.2s ${EASE} ${d}ms`;
     } else if (t === 'mask') {
       el.style.transform = 'translateY(105%)';
@@ -106,11 +99,6 @@ function checkReveal() {
     return true;
   });
 }
-function resetReveal(container) {
-  if (!container) return;
-  $$('[data-reveal]', container).forEach((el) => { el._rv = undefined; });
-  $$('[data-count]', container).forEach((el) => { el._counted = false; });
-}
 function count(el) {
   if (el._counted) return; el._counted = true;
   const end = +el.dataset.count, t0 = performance.now();
@@ -118,11 +106,11 @@ function count(el) {
   requestAnimationFrame(step);
 }
 
-/* ---------- Scroll: parallax, fill text, horizontal scroll ---------- */
+/* ---------- Scroll handlers ---------- */
 function measure() {
   const o = ref('hRef'), t = ref('trackRef');
   if (o && t) {
-    if (state.narrow || state.page !== 'accueil') { o.style.height = 'auto'; t.style.transform = 'none'; hDist = 0; }
+    if (state.narrow || !document.querySelector('.custom-services')) { o.style.height = 'auto'; t.style.transform = 'none'; hDist = 0; }
     else { hDist = Math.max(0, t.scrollWidth - window.innerWidth); o.style.height = (window.innerHeight + hDist) + 'px'; }
   }
   tick();
@@ -130,11 +118,10 @@ function measure() {
 function tick() {
   const y = window.scrollY, vh = window.innerHeight;
   const cw = document.documentElement.clientWidth || window.innerWidth;
-  const n = cw < 980, st = cw < 640;
-  if (n !== state.narrow || st !== state.stack) { setState({ narrow: n, stack: st, menu: n ? state.menu : false }); measure(); return; }
+  const n = cw < 980;
+  if (n !== state.narrow) { setState({ narrow: n, menu: n ? state.menu : false }); measure(); return; }
   const sc = y > 30; if (sc !== state.scrolled) setState({ scrolled: sc });
   checkReveal();
-  if (state.page !== 'accueil') return;
   const hi = ref('heroImgRef'); if (hi) hi.style.transform = `translate3d(0,${Math.min(y, vh) * 0.06}px,0)`;
   const ir = ref('introRef'), f = ref('fillRef');
   if (ir && f) { const r = ir.getBoundingClientRect(); const pr = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.25))); f.style.backgroundSize = `${(pr * 100).toFixed(1)}% 100%, 100% 100%`; }
@@ -146,51 +133,32 @@ function tick() {
   }
 }
 
-/* ---------- Page navigation ---------- */
-const PAGE_KEY = { accueil: 'isHome', bianka: 'isBianka', alexandre: 'isAlex' };
-function go(page, anchor) {
-  const scroll = (smooth) => {
-    if (anchor) { const el = document.getElementById(anchor); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 60, behavior: smooth ? 'smooth' : 'instant' }); }
-    else window.scrollTo({ top: 0, behavior: 'instant' });
-  };
-  setState({ menu: false });
-  const target = anchor === 'nous-joindre' ? state.page : page;
-  if (target === state.page) { scroll(true); return; }
-  setState({ curtain: 1 });
-  setTimeout(() => {
-    resetReveal(document.querySelector(`[data-if="${PAGE_KEY[target]}"]`));
-    setState({ page: target });
-    history.replaceState(null, '', target === 'accueil' ? location.pathname + location.search : '#/' + target);
-    setTimeout(() => {
-      scroll(false); setupReveal(); measure();
-      setState({ curtain: 2 });
-      setTimeout(() => setState({ curtain: 0 }), 700);
-    }, 80);
-  }, 620);
-}
-
-const nav = (pg, a) => (e) => { e.preventDefault(); go(pg, a); };
+/* ---------- Actions ---------- */
 const actions = {
-  goHome: nav('accueil'), goBianka: nav('bianka'), goAlex: nav('alexandre'),
-  navEquipe: nav('accueil', 'equipe'), navServices: nav('accueil', 'services'), navPerso: nav('accueil', 'services-personnalises'),
-  navEng: nav('accueil', 'engagement'), navContact: nav('accueil', 'nous-joindre'),
   toggleMenu: () => setState({ menu: !state.menu }),
   toTop: (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); },
   go0: () => goSlide(0), go1: () => goSlide(1), go2: () => goSlide(2),
 };
 
-/* ---------- Init ---------- */
 document.addEventListener('click', (e) => {
   const el = e.target.closest('[data-action]');
   if (el && actions[el.dataset.action]) actions[el.dataset.action](e);
 });
+
+// handle smooth scroll for same-page anchors
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a[href^="#"]:not([data-action])');
+  if (a && a.getAttribute('href').length > 1) {
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) { e.preventDefault(); window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 60, behavior: 'smooth' }); }
+  }
+});
+
 $$('[data-submit]').forEach((f) => f.addEventListener('submit', (e) => {
   e.preventDefault();
   setState({ sent: true });
 }));
-
-const h = (location.hash || '').replace('#/', '');
-if (h === 'bianka' || h === 'alexandre') state.page = h;
 
 let raf = null;
 window.addEventListener('scroll', () => { if (raf) return; raf = requestAnimationFrame(() => { raf = null; tick(); }); }, { passive: true });
@@ -198,9 +166,8 @@ window.addEventListener('resize', measure);
 
 render();
 tick();
-startTimer();
+if (document.querySelector('.hero-slides')) startTimer();
 setupReveal();
 measure();
 if (document.fonts) document.fonts.ready.then(measure);
 window.addEventListener('load', measure);
-setInterval(tick, 400);
