@@ -1,8 +1,8 @@
 import './style.css';
 
-const CONFIG = { autoplay: true, animations: true, slideDelay: 5500 };
-const CAPTIONS = ['Le bureau · 401, avenue Du Pont Nord', 'Me Villeneuve & Me Demers-Bergeron', 'L’équipe du bureau'];
-const EASE = 'cubic-bezier(.16,1,.3,1)';
+const CONFIG = { autoplay: true, slideDelay: 6000 };
+const CAPTIONS = ['Le bureau · 401, avenue Du Pont Nord', 'Me Villeneuve & Me Demers-Bergeron', 'L\u2019\u00e9quipe du bureau'];
+const EASE = 'cubic-bezier(.22,1,.36,1)';
 
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const ref = (n) => document.querySelector(`[data-ref="${n}"]`);
@@ -17,28 +17,26 @@ function vals() {
   const { page, slide, prev, scrolled, menu, sent, narrow, stack, curtain } = state;
   const v = {
     isHome: page === 'accueil', isBianka: page === 'bianka', isAlex: page === 'alexandre',
-    navBg: scrolled || menu ? 'rgba(14,18,27,.82)' : 'rgba(14,18,27,0)',
-    navLine: scrolled ? 'rgba(244,241,234,.08)' : 'rgba(244,241,234,0)',
-    navPad: scrolled ? '14px clamp(20px,4vw,56px)' : '26px clamp(20px,4vw,56px)',
-    logoH: scrolled ? '40px' : '52px',
+    navBg: scrolled || menu ? 'rgba(28,31,38,.88)' : 'rgba(28,31,38,0)',
+    navLine: scrolled ? 'rgba(245,242,236,.08)' : 'rgba(245,242,236,0)',
+    navPad: scrolled ? '16px clamp(20px,4vw,56px)' : '22px clamp(20px,4vw,56px)',
     wide: !narrow, narrow, menuOpen: narrow && menu, menuLabel: menu ? 'Fermer' : 'Menu',
     curtainT: curtain === 1 ? 'translateY(0)' : curtain === 2 ? 'translateY(-100%)' : 'translateY(100%)',
-    curtainTr: curtain === 0 ? 'none' : 'transform .72s cubic-bezier(.76,0,.24,1)',
-    heroCols: stack ? 'minmax(0,1fr)' : narrow ? 'minmax(0,1.1fr) minmax(0,.9fr)' : 'minmax(0,1.2fr) minmax(0,.8fr)',
-    cardOffset: narrow ? '0px' : '120px',
+    curtainTr: curtain === 0 ? 'none' : 'transform .6s cubic-bezier(.76,0,.24,1)',
+    heroCols: stack ? 'minmax(0,1fr)' : narrow ? 'minmax(0,1.1fr) minmax(0,.9fr)' : 'minmax(0,1.15fr) minmax(0,.85fr)',
+    cardOffset: narrow ? '0px' : '100px',
     slideCaption: CAPTIONS[slide],
     hPos: narrow ? 'relative' : 'sticky', hHeight: narrow ? 'auto' : '100vh',
-    hPad: narrow ? '80px 0' : '90px 0 40px', hDir: narrow ? 'column' : 'row',
     trackW: narrow ? '100%' : 'max-content',
-    cardW: narrow ? '100%' : 'clamp(340px,30vw,460px)', cardH: narrow ? 'auto' : 'min(62vh,600px)',
+    cardW: narrow ? '100%' : 'clamp(340px,30vw,460px)', cardH: narrow ? 'auto' : 'min(60vh,580px)',
     notSent: !sent, sent,
   };
   for (let i = 0; i < 3; i++) {
     const act = slide === i, pv = prev === i && !act;
     v['z' + i] = act ? 2 : pv ? 1 : 0;
     v['c' + i] = act || pv ? 'inset(0 0 0 0)' : 'inset(100% 0 0 0)';
-    v['ct' + i] = act ? 'clip-path 1.3s cubic-bezier(.76,0,.24,1)' : 'none';
-    v['s' + i] = act ? 1 : 1.18;
+    v['ct' + i] = act ? 'clip-path 1.2s cubic-bezier(.76,0,.24,1)' : 'none';
+    v['s' + i] = act ? 1 : 1.12;
     v['o' + i] = act ? 1 : 0.4;
     v['w' + i] = act ? '40px' : '14px';
   }
@@ -54,16 +52,15 @@ function render() {
 
 function setState(patch) { Object.assign(state, patch); render(); }
 
-/* ---------- Diaporama ---------- */
+/* ---------- Slideshow ---------- */
 function startTimer() {
   clearInterval(timer);
   if (CONFIG.autoplay) timer = setInterval(() => setState({ prev: state.slide, slide: (state.slide + 1) % 3 }), CONFIG.slideDelay);
 }
 function goSlide(i) { if (i !== state.slide) { setState({ prev: state.slide, slide: i }); startTimer(); } }
 
-/* ---------- Apparitions au défilement ---------- */
+/* ---------- Scroll reveals (subtle) ---------- */
 function setupReveal() {
-  if (!CONFIG.animations) return;
   pending = pending.filter((el) => el.isConnected);
   $$('[data-reveal]').forEach((el) => {
     if (el._rv) return;
@@ -73,14 +70,17 @@ function setupReveal() {
     if (t === 'img') {
       el.style.clipPath = 'inset(100% 0 0 0)';
       const im = el.querySelector('img');
-      if (im) { im.style.scale = '1.25'; if (!im._tr) { im._tr = true; im.style.transition = (im.style.transition ? im.style.transition + ',' : '') + `scale 1.8s ${EASE} ${d}ms`; } }
-      el._tr = `clip-path 1.4s ${EASE} ${d}ms`;
+      if (im) {
+        im.style.scale = '1.15';
+        if (!im._tr) { im._tr = true; im.style.transition = (im.style.transition ? im.style.transition + ',' : '') + `scale 1.5s ${EASE} ${d}ms`; }
+      }
+      el._tr = `clip-path 1.2s ${EASE} ${d}ms`;
     } else if (t === 'mask') {
       el.style.transform = 'translateY(105%)';
-      el._tr = `transform 1.2s ${EASE} ${d}ms`;
+      el._tr = `transform 1s ${EASE} ${d}ms`;
     } else {
-      el.style.opacity = '0'; el.style.transform = 'translateY(40px)';
-      el._tr = `opacity 1.1s ${EASE} ${d}ms, transform 1.1s ${EASE} ${d}ms`;
+      el.style.opacity = '0'; el.style.transform = 'translateY(28px)';
+      el._tr = `opacity .9s ${EASE} ${d}ms, transform .9s ${EASE} ${d}ms`;
     }
     pending.push(el);
   });
@@ -99,7 +99,7 @@ function checkReveal() {
   const vh = window.innerHeight;
   pending = pending.filter((el) => {
     if (!el.isConnected) return false;
-    if (!el.getClientRects().length) return true; // page masquée
+    if (!el.getClientRects().length) return true;
     const t = el.dataset.reveal;
     const target = (t === 'img' || t === 'mask') && el.parentElement ? el.parentElement : el;
     if (target.getBoundingClientRect().top < vh * 0.92) { showEl(el); return false; }
@@ -114,11 +114,11 @@ function resetReveal(container) {
 function count(el) {
   if (el._counted) return; el._counted = true;
   const end = +el.dataset.count, t0 = performance.now();
-  const step = (t) => { const p = Math.min(1, (t - t0) / 1800); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 4))); if (p < 1) requestAnimationFrame(step); };
+  const step = (t) => { const p = Math.min(1, (t - t0) / 1600); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 4))); if (p < 1) requestAnimationFrame(step); };
   requestAnimationFrame(step);
 }
 
-/* ---------- Défilement : parallaxe, texte, défilement horizontal ---------- */
+/* ---------- Scroll: parallax, fill text, horizontal scroll ---------- */
 function measure() {
   const o = ref('hRef'), t = ref('trackRef');
   if (o && t) {
@@ -134,10 +134,8 @@ function tick() {
   if (n !== state.narrow || st !== state.stack) { setState({ narrow: n, stack: st, menu: n ? state.menu : false }); measure(); return; }
   const sc = y > 30; if (sc !== state.scrolled) setState({ scrolled: sc });
   checkReveal();
-  const p = ref('progRef');
-  if (p) { const max = document.documentElement.scrollHeight - vh; p.style.transform = `scaleX(${max > 0 ? Math.min(1, y / max) : 0})`; }
   if (state.page !== 'accueil') return;
-  const hi = ref('heroImgRef'); if (hi) hi.style.transform = `translate3d(0,${Math.min(y, vh) * 0.08}px,0)`;
+  const hi = ref('heroImgRef'); if (hi) hi.style.transform = `translate3d(0,${Math.min(y, vh) * 0.06}px,0)`;
   const ir = ref('introRef'), f = ref('fillRef');
   if (ir && f) { const r = ir.getBoundingClientRect(); const pr = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.25))); f.style.backgroundSize = `${(pr * 100).toFixed(1)}% 100%, 100% 100%`; }
   const o = ref('hRef'), t = ref('trackRef'), bar = ref('hBarRef');
@@ -148,7 +146,7 @@ function tick() {
   }
 }
 
-/* ---------- Navigation entre les pages ---------- */
+/* ---------- Page navigation ---------- */
 const PAGE_KEY = { accueil: 'isHome', bianka: 'isBianka', alexandre: 'isAlex' };
 function go(page, anchor) {
   const scroll = (smooth) => {
@@ -166,9 +164,9 @@ function go(page, anchor) {
     setTimeout(() => {
       scroll(false); setupReveal(); measure();
       setState({ curtain: 2 });
-      setTimeout(() => setState({ curtain: 0 }), 900);
+      setTimeout(() => setState({ curtain: 0 }), 700);
     }, 80);
-  }, 720);
+  }, 620);
 }
 
 const nav = (pg, a) => (e) => { e.preventDefault(); go(pg, a); };
@@ -181,14 +179,13 @@ const actions = {
   go0: () => goSlide(0), go1: () => goSlide(1), go2: () => goSlide(2),
 };
 
-/* ---------- Initialisation ---------- */
+/* ---------- Init ---------- */
 document.addEventListener('click', (e) => {
   const el = e.target.closest('[data-action]');
   if (el && actions[el.dataset.action]) actions[el.dataset.action](e);
 });
 $$('[data-submit]').forEach((f) => f.addEventListener('submit', (e) => {
   e.preventDefault();
-  // TODO : brancher l’envoi réel (Formspree, EmailJS, API du serveur…)
   setState({ sent: true });
 }));
 
