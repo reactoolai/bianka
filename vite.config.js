@@ -1,19 +1,41 @@
 import { resolve } from 'path';
+import { readFileSync } from 'fs';
 import { defineConfig } from 'vite';
 
+const pages = [
+  'index', 'bianka', 'alexandre', 'equipe', 'services',
+  'rendez-vous', 'faq', 'contact', 'confidentialite', 'admin',
+  // anciennes adresses : redirections vers les nouvelles pages
+  'services-personnalises', 'engagement',
+];
+
+/**
+ * Insère le menu et le pied de page partagés dans chaque page.
+ *   <!-- @nav bianka -->  → menu, avec la page courante marquée
+ *   <!-- @footer -->      → pied de page
+ */
+function partials() {
+  const read = (f) => readFileSync(resolve(__dirname, 'partials', f), 'utf8');
+  return {
+    name: 'notaires-alma-partials',
+    transformIndexHtml: {
+      order: 'pre',
+      handler(html) {
+        return html
+          .replace(/<!--\s*@nav\s+([\w-]+)\s*-->/, (_, cur) =>
+            read('nav.html').replace(`data-nav="${cur}"`, `data-nav="${cur}" aria-current="page"`))
+          .replace(/<!--\s*@footer\s*-->/, () => read('footer.html'));
+      },
+    },
+  };
+}
+
 export default defineConfig({
+  plugins: [partials()],
+  server: { watch: { ignored: ['!**/partials/**'] } },
   build: {
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html'),
-        equipe: resolve(__dirname, 'equipe.html'),
-        services: resolve(__dirname, 'services.html'),
-        'services-personnalises': resolve(__dirname, 'services-personnalises.html'),
-        engagement: resolve(__dirname, 'engagement.html'),
-        rendezvous: resolve(__dirname, 'rendez-vous.html'),
-        bianka: resolve(__dirname, 'bianka.html'),
-        alexandre: resolve(__dirname, 'alexandre.html'),
-      },
+      input: Object.fromEntries(pages.map((p) => [p, resolve(__dirname, `${p}.html`)])),
     },
   },
 });

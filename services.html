@@ -1,97 +1,125 @@
 <!doctype html>
-<html lang="fr-CA">
+<html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Services | Bianka Villeneuve Notaire — Alma</title>
-<meta name="description" content="Services notariaux à Alma: mariage, union libre, corporatif, homologation, garantie hypothécaire, immobilier, mandat, Régime de protection, succession, testament.">
-<link rel="icon" href="/images/logo-bianka-villeneuve.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services notariaux à Alma — Notaires Alma</title>
+  <meta name="description" content="Testament, mandat de protection, immobilier, contrat de mariage, union de fait, succession et droit des affaires. Ce que nous faisons, quand consulter et quoi apporter.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/src/main.js"></script>
 </head>
 <body>
+<!-- @nav services -->
+<main id="contenu">
 
-<header class="nav-header">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire"></a>
-    <nav class="nav-links" data-if="wide">
-      <a href="/equipe.html">L'équipe</a>
-      <a href="/services.html">Services</a>
-      <a href="/services-personnalises.html">Services personnalisés</a>
-      <a href="/engagement.html">Engagement</a>
-      <a href="/rendez-vous.html" class="nav-cta">Rendez-vous</a>
-    </nav>
-    <button data-action="toggleMenu" class="nav-menu-btn" data-if="narrow"><span data-text="menuLabel"></span></button>
-  </div>
-</header>
-
-<div data-if="menuOpen" class="mobile-menu">
-  <nav>
-    <a href="/equipe.html">L'équipe</a>
-    <a href="/bianka.html" class="sub-link">Me Bianka Villeneuve</a>
-    <a href="/alexandre.html" class="sub-link">Me Alexandre Demers-Bergeron</a>
-    <a href="/services.html">Services</a>
-    <a href="/services-personnalises.html">Services personnalisés</a>
-    <a href="/engagement.html">Engagement</a>
-    <a href="/rendez-vous.html">Rendez-vous</a>
-  </nav>
-  <a href="tel:4186683118" class="mobile-phone">418-668-3118 · 401, avenue Du Pont Nord, Alma</a>
-</div>
-
-<section class="page-hero">
-  <a href="/" class="back-link" data-reveal="up">← Accueil</a>
-  <p class="eyebrow" data-reveal="up">Services</p>
-  <h1 class="page-title">
-    <span class="reveal-line"><span data-reveal="mask" data-delay="100">Bien outillé</span></span>
-    <span class="reveal-line"><span data-reveal="mask" data-delay="200" style="font-style:italic;color:var(--copper-light)">face à la tempête.</span></span>
-  </h1>
-  <p data-reveal="up" data-delay="350" class="page-lead">Me Bianka Villeneuve vous offre une gamme de services personnalisés et toujours bien adaptés à votre situation. Pour avoir la paix d'esprit en cas d'inaptitude, d'union libre ou en ce qui a trait à votre succession, consultez-nous sans tarder.</p>
-</section>
-
-<section class="page-body">
-  <div class="services-grid">
-    <div class="services-aside">
-      <p class="eyebrow" data-reveal="up">La gamme complète</p>
-      <h2 class="section-title" style="font-size:clamp(32px,4vw,56px)">
-        <span class="reveal-line"><span data-reveal="mask">Nos</span></span>
-        <span class="reveal-line"><span data-reveal="mask" data-delay="100" style="font-style:italic;color:var(--copper)">12 services.</span></span>
-      </h2>
-      <p data-reveal="up" data-delay="200" class="section-sub" style="margin-top:24px">Parce que la vie nous amène son lot de beaux moments, mais aussi, malheureusement, de mauvaises surprises et de grands bouleversements, mieux vaut être bien outillé pour faire face à la tempête.</p>
-      <a href="/services-personnalises.html" class="btn-primary" style="margin-top:28px" data-reveal="up" data-delay="300">Services personnalisés →</a>
+  <section class="wrap" style="padding-top: clamp(56px, 8vw, 112px); padding-bottom: clamp(40px, 5vw, 64px); display: flex; flex-direction: column; gap: 48px">
+    <div class="title-block" data-reveal style="align-self: flex-start">
+      <h1 class="display display--xl">Services</h1>
+      <p class="script script--tag" aria-hidden="true" style="right: -0.6em">sur mesure</p>
     </div>
-    <div class="services-list">
-      <div class="services-list-head" data-reveal="up">Nos services :</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">01</span>Célébration de mariage et contrat de mariage</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">02</span>Contrat d'union libre</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">03</span>Corporatif</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">04</span>Homologation de mandat en cas d'inaptitude</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">05</span>Garantie hypothécaire</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">06</span>Immobilier (achat, vente, promesse d'achat)</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">07</span>Mandant en prévision de l'inaptitude</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">08</span>Ouverture de Régime de protection</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">09</span>Recherches testamentaires</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">10</span>Règlement de succession</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">11</span>Testament</div>
-      <div data-reveal="up" class="service-item"><span class="service-num">12</span>Vérification de testament</div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: flex-end">
+      <p class="lead" style="max-width: 640px">La vie amène son lot de beaux moments, mais aussi de mauvaises surprises et de grands bouleversements. Mieux vaut être bien outillé pour faire face à la tempête.</p>
+      <nav class="chips" aria-label="Domaines">
+        <a href="#famille">Famille</a><a href="#succession">Successions</a><a href="#protection">Protection</a><a href="#immobilier">Immobilier</a><a href="#entreprise">Entreprise</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-col"><div class="footer-label">Bureau</div>401, Avenue Du Pont Nord<br>Alma, (Quebec) G8B 5E4</div>
-    <div class="footer-col"><div class="footer-label">Vos notaires</div><a href="/bianka.html">Me Bianka Villeneuve</a><a href="/alexandre.html">Me Alexandre Demers-Bergeron</a></div>
-    <div class="footer-col"><div class="footer-label">Téléphone</div><a href="tel:4186683118" class="footer-phone">(418) 668-3118</a></div>
-  </div>
-  <div class="footer-logo"><span class="footer-logo-bg"><img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire"></span></div>
-  <div class="footer-large">Vos <em>notaires</em></div>
-  <div class="footer-bottom">
-    <span>Copyright © 2026 · Bianka Villeneuve Notaire</span>
-    <a href="#" data-action="toTop">Retour en haut ↑</a>
-  </div>
-</footer>
+  <div class="rule-top">
 
-<script type="module" src="/src/main.js"></script>
+    <article class="domain" id="famille">
+      <div class="wrap domain__inner">
+        <div class="domain__head" data-reveal><span class="toc__num">N° 01</span><h2 class="display" style="font-size: clamp(34px, 5vw, 76px)">Famille &amp; union</h2><span class="script" aria-hidden="true">à deux</span></div>
+        <div class="domain__grid" data-reveal>
+          <div>
+            <p style="font-size: 18px; line-height: 1.65">Que vous vous mariiez ou viviez en union de fait, vos droits ne sont pas les mêmes. On vous explique clairement les conséquences de chaque option et on met vos choix par écrit. Me Villeneuve est aussi célébrante de mariage.</p>
+            <a class="btn btn--dark" href="/rendez-vous.html?motif=Mariage%20ou%20contrat%20de%20mariage" style="align-self: flex-start">Prendre rendez-vous ↗</a>
+          </div>
+          <div><span class="label">Ce que nous faisons</span><ul><li>Célébration de mariage</li><li>Contrat de mariage et choix du régime matrimonial</li><li>Contrat de vie commune (union de fait)</li><li>Régime d’union parentale : explications et options</li><li>Modification de régime matrimonial</li></ul></div>
+          <div><span class="label">Quand consulter</span><p class="small">Avant le mariage, dès l’emménagement à deux, à la naissance d’un enfant ou à l’achat d’une maison en couple.</p><span class="label">À apporter</span><p class="small">Pièces d’identité des deux conjoints, liste approximative des biens et des dettes de chacun.</p></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="domain" id="succession">
+      <div class="wrap domain__inner">
+        <div class="domain__head" data-reveal><span class="toc__num">N° 02</span><h2 class="display" style="font-size: clamp(34px, 5vw, 76px)">Testament &amp; succession</h2><span class="script" aria-hidden="true">transmettre</span></div>
+        <div class="domain__grid" data-reveal>
+          <div>
+            <p style="font-size: 18px; line-height: 1.65">Un testament notarié protège vos proches : nomination d’un tuteur pour vos enfants mineurs, protection de certains biens légués contre la saisie, remise de l’héritage étalée dans le temps par le liquidateur. Et au moment d’un décès, on accompagne la famille du début à la fin.</p>
+            <a class="btn btn--dark" href="/rendez-vous.html?motif=Testament" style="align-self: flex-start">Prendre rendez-vous ↗</a>
+          </div>
+          <div><span class="label">Ce que nous faisons</span><ul><li>Testament notarié</li><li>Recherches testamentaires</li><li>Vérification de testament olographe ou devant témoins</li><li>Règlement complet de succession</li><li>Accompagnement du liquidateur</li></ul></div>
+          <div><span class="label">Quand consulter</span><p class="small">À la naissance d’un enfant, après une séparation, à l’achat d’une propriété, au démarrage d’une entreprise, ou dès qu’un proche décède.</p><span class="label">À apporter</span><p class="small">Pour un testament : liste des biens et bénéficiaires souhaités. Pour une succession : certificat de décès, testament si connu, relevés bancaires et titres de propriété.</p></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="domain" id="protection">
+      <div class="wrap domain__inner">
+        <div class="domain__head" data-reveal><span class="toc__num">N° 03</span><h2 class="display" style="font-size: clamp(34px, 5vw, 76px)">Protection &amp; inaptitude</h2><span class="script" aria-hidden="true">prévoir</span></div>
+        <div class="domain__grid" data-reveal>
+          <div>
+            <p style="font-size: 18px; line-height: 1.65">Personne ne souhaite être privé de sa capacité de décider. Pourtant, nul n’est à l’abri d’un accident ou d’une maladie. Désigner un mandataire pendant qu’on est en pleine possession de ses moyens reste la meilleure façon d’avoir l’esprit tranquille.</p>
+            <a class="btn btn--dark" href="/rendez-vous.html?motif=Mandat%20de%20protection" style="align-self: flex-start">Prendre rendez-vous ↗</a>
+          </div>
+          <div><span class="label">Ce que nous faisons</span><ul><li>Mandat de protection (anciennement mandat en prévision de l’inaptitude)</li><li>Homologation du mandat de protection</li><li>Ouverture d’un régime de protection</li><li>Procuration</li></ul></div>
+          <div><span class="label">Quand consulter</span><p class="small">Idéalement maintenant, à tout âge. Pour l’homologation : dès que l’inaptitude d’un proche est constatée par une évaluation médicale et psychosociale.</p><span class="label">À apporter</span><p class="small">Pièce d’identité, coordonnées des mandataires choisis. Pour une homologation : le mandat et les évaluations obtenues.</p></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="domain" id="immobilier">
+      <div class="wrap domain__inner">
+        <div class="domain__head" data-reveal><span class="toc__num">N° 04</span><h2 class="display" style="font-size: clamp(34px, 5vw, 76px)">Immobilier</h2><span class="script" aria-hidden="true">chez soi</span></div>
+        <div class="domain__grid" data-reveal>
+          <div>
+            <p style="font-size: 18px; line-height: 1.65">Acheter ou vendre une propriété est souvent la transaction d’une vie. Le notaire vérifie les titres, sécurise les sommes dans son compte en fidéicommis et s’assure que vous devenez propriétaire sans mauvaise surprise. L’acte d’hypothèque, lui, doit obligatoirement être notarié.</p>
+            <a class="btn btn--dark" href="/rendez-vous.html?motif=Achat%20ou%20vente%20d%E2%80%99une%20propri%C3%A9t%C3%A9" style="align-self: flex-start">Prendre rendez-vous ↗</a>
+          </div>
+          <div><span class="label">Ce que nous faisons</span><ul><li>Révision de la promesse d’achat</li><li>Acte de vente</li><li>Acte d’hypothèque et refinancement</li><li>Quittance et radiation d’hypothèque</li><li>Achat entre particuliers</li></ul></div>
+          <div><span class="label">Quand consulter</span><p class="small">Avant de signer une promesse d’achat si possible, sinon dès qu’elle est acceptée. Pour un refinancement : dès l’approbation de votre institution.</p><span class="label">À apporter</span><p class="small">Promesse d’achat acceptée, coordonnées du prêteur, certificat de localisation, pièces d’identité.</p></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="domain" id="entreprise">
+      <div class="wrap domain__inner">
+        <div class="domain__head" data-reveal><span class="toc__num">N° 05</span><h2 class="display" style="font-size: clamp(34px, 5vw, 76px)">Entreprise</h2><span class="script" aria-hidden="true">bâtir</span></div>
+        <div class="domain__grid" data-reveal>
+          <div>
+            <p style="font-size: 18px; line-height: 1.65">Au-delà des actes nécessaires à la formation d’une compagnie ou d’une société, Me Villeneuve offre des formations en entreprise. Une approche d’entrepreneure à entrepreneur.</p>
+            <a class="btn btn--dark" href="/rendez-vous.html?motif=Entreprise" style="align-self: flex-start">Prendre rendez-vous ↗</a>
+          </div>
+          <div><span class="label">Ce que nous faisons</span><ul><li>Constitution de société par actions</li><li>Convention entre actionnaires ou associés</li><li>Tenue des registres et résolutions</li><li>Achat ou vente d’entreprise</li><li>Formations en entreprise</li></ul></div>
+          <div><span class="label">Quand consulter</span><p class="small">Au démarrage, à l’arrivée d’un nouvel associé, lors d’un financement ou avant de vendre.</p><span class="label">À apporter</span><p class="small">Nom projeté, liste des actionnaires et répartition souhaitée, projet d’affaires en quelques lignes.</p></div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <section class="section--dark">
+    <div class="wrap section" style="display: flex; flex-direction: column; gap: 48px">
+      <h2 class="display display--m" data-reveal>Comment ça se passe<br><span class="gold-light">en quatre étapes</span></h2>
+      <ol class="steps">
+        <li data-reveal><strong>01</strong><b>Un premier appel</b><span>Guylaine prend vos coordonnées et le motif, puis vous propose un moment avec le notaire de votre choix.</span></li>
+        <li data-reveal><strong>02</strong><b>La rencontre</b><span>On écoute votre situation, on vous explique vos options et les honoraires, sans jargon.</span></li>
+        <li data-reveal><strong>03</strong><b>La rédaction</b><span>Le notaire prépare l’acte et vous le transmet pour lecture avant la signature.</span></li>
+        <li data-reveal><strong>04</strong><b>La signature</b><span>On relit ensemble, vous signez, et l’acte est conservé en toute sécurité au greffe de l’étude.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="wrap section sign" data-reveal>
+    <h2 class="display display--m" style="font-size: clamp(32px, 4.6vw, 68px)">Votre situation n’est pas dans la liste ?</h2>
+    <p class="lead" style="max-width: 640px; color: var(--body-soft)">Appelez-nous : on vous dira franchement si nous pouvons vous aider, ou vers qui vous tourner.</p>
+    <a class="sign__line" href="/rendez-vous.html">
+      <span><span class="sign__x" aria-hidden="true">✕</span><span class="sign__script">Prendre rendez-vous</span></span>
+      <span class="sign__hint">Signez ici ↗</span>
+    </a>
+  </section>
+
+</main>
+<!-- @footer -->
 </body>
 </html>

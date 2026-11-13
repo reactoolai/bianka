@@ -1,100 +1,118 @@
 <!doctype html>
-<html lang="fr-CA">
+<html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prendre rendez-vous | Bianka Villeneuve Notaire — Alma</title>
-<meta name="description" content="Prenez rendez-vous avec Me Bianka Villeneuve ou Me Alexandre Demers-Bergeron, notaires au 401, avenue Du Pont Nord à Alma. 418-668-3118.">
-<link rel="icon" href="/images/logo-bianka-villeneuve.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prendre rendez-vous — Notaires Alma</title>
+  <meta name="description" content="Prenez rendez-vous avec Me Bianka Villeneuve ou Me Alexandre Demers-Bergeron, notaires à Alma.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script type="module" src="/src/main.js"></script>
 </head>
 <body>
+<!-- @nav rdv -->
+<main id="contenu">
+  <section class="wrap section" style="display: flex; flex-wrap: wrap; gap: 56px; padding-top: clamp(56px, 8vw, 104px)">
 
-<header class="nav-header">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo"><img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire"></a>
-    <nav class="nav-links" data-if="wide">
-      <a href="/equipe.html">L'équipe</a>
-      <a href="/services.html">Services</a>
-      <a href="/services-personnalises.html">Services personnalisés</a>
-      <a href="/engagement.html">Engagement</a>
-      <a href="/rendez-vous.html" class="nav-cta">Rendez-vous</a>
-    </nav>
-    <button data-action="toggleMenu" class="nav-menu-btn" data-if="narrow"><span data-text="menuLabel"></span></button>
-  </div>
-</header>
-
-<div data-if="menuOpen" class="mobile-menu">
-  <nav>
-    <a href="/equipe.html">L'équipe</a>
-    <a href="/bianka.html" class="sub-link">Me Bianka Villeneuve</a>
-    <a href="/alexandre.html" class="sub-link">Me Alexandre Demers-Bergeron</a>
-    <a href="/services.html">Services</a>
-    <a href="/services-personnalises.html">Services personnalisés</a>
-    <a href="/engagement.html">Engagement</a>
-    <a href="/rendez-vous.html">Rendez-vous</a>
-  </nav>
-  <a href="tel:4186683118" class="mobile-phone">418-668-3118 · 401, avenue Du Pont Nord, Alma</a>
-</div>
-
-<section class="page-hero on-ink">
-  <a href="/" class="back-link" data-reveal="up">← Accueil</a>
-  <p class="eyebrow on-ink" data-reveal="up">Rendez-vous</p>
-  <h1 class="page-title on-ink">
-    <span class="reveal-line"><span data-reveal="mask" data-delay="100">Parlons de</span></span>
-    <span class="reveal-line"><span data-reveal="mask" data-delay="200" style="font-style:italic;color:var(--copper-light)">votre situation.</span></span>
-  </h1>
-  <p data-reveal="up" data-delay="350" class="page-lead on-ink">Que ce soit pour un testament, une succession, un achat immobilier ou tout autre service notarial, nous sommes à votre écoute.</p>
-</section>
-
-<section class="contact" style="padding-top:clamp(56px,7vw,96px)">
-  <div class="contact-grid">
-    <div class="contact-left">
-      <div class="contact-photo" data-reveal="img"><img src="/images/local.jpg" alt="Enseigne du bureau"></div>
-      <div data-reveal="up" data-delay="100" class="contact-info">
-        <div><div class="info-label">Adresse</div><p class="info-text">Me Bianka Villeneuve, notaire<br>401, avenue Du Pont Nord<br>Alma (QC) G8B 5E4</p></div>
-        <div><div class="info-label">Téléphone</div><a href="tel:4186683118" class="info-phone">418-668-3118</a></div>
+    <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 40px">
+      <div class="title-block" data-reveal>
+        <h1 class="display" style="font-size: clamp(48px, 6vw, 92px); line-height: .88; letter-spacing: -.04em">Prendre<br>rendez-<br>vous</h1>
+        <p class="script" aria-hidden="true" style="position: absolute; right: 0; bottom: -0.4em; font-size: clamp(56px, 5vw, 84px); transform: rotate(-8deg); white-space: nowrap">en toute confiance</p>
       </div>
+      <p style="font-size: 15px">Vous préférez parler à quelqu’un ?<br><a href="tel:+14186683118" style="font-family: var(--f-display); font-stretch: 112%; font-weight: 700; font-size: 26px; text-decoration: none">(418) 668-3118</a></p>
     </div>
-    <div data-reveal="up" data-delay="140" class="contact-form-wrap">
-      <div data-if="notSent">
-        <form data-submit="submit" class="contact-form">
-          <div class="form-row">
-            <label>Votre nom (obligatoire)<input required class="form-input"></label>
-            <label>Votre email (obligatoire)<input type="email" required class="form-input"></label>
+
+    <div class="form-box" style="flex: 1.6 1 560px; min-width: 0">
+      <div class="form-done" data-done hidden role="status" tabindex="-1">
+        <span class="script">Merci</span>
+        <h2 class="display display--s" style="font-size: 36px">Demande reçue</h2>
+        <p style="font-size: 17px; max-width: 520px" data-done-text>Votre demande a bien été transmise. Nous vous contacterons sous peu pour confirmer la date et l’heure.</p>
+        <a class="btn btn--line" href="/" style="align-self: flex-start">Retour à l’accueil</a>
+      </div>
+
+      <form data-form="rendez_vous" novalidate>
+        <fieldset class="form-step">
+          <legend class="label">01 — Votre notaire *</legend>
+          <div class="full" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; margin-top: 14px">
+            <label class="choice">
+              <input type="radio" name="notaire" value="bianka" required>
+              <img src="/images/bianka-villeneuve.jpg" alt="" style="object-position: 50% 15%">
+              <span><b>Me Bianka Villeneuve</b><small>Notaire associée</small></span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="notaire" value="alexandre">
+              <img src="/images/Alexandre.jpg" alt="" style="object-position: 50% 20%">
+              <span><b>Me Alexandre Demers-Bergeron</b><small>Notaire</small></span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="notaire" value="indifferent">
+              <span class="choice__mark"><svg aria-hidden="true"><use href="#plume-pleine"/></svg></span>
+              <span><b>Le premier disponible</b><small>Délai le plus court</small></span>
+            </label>
           </div>
-          <label>Sujet (obligatoire)<input required class="form-input"></label>
-          <label>Votre message<textarea rows="5" class="form-input form-textarea"></textarea></label>
-          <button type="submit" class="btn-primary form-submit">Envoyer →</button>
-        </form>
-      </div>
-      <div data-if="sent" class="contact-sent">
-        <span class="sent-title">Merci.</span>
-        <p>Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.</p>
-      </div>
+        </fieldset>
+
+        <div class="form-step">
+          <span class="label">02 — Votre besoin</span>
+          <label class="field">Motif *
+            <select name="motif" required>
+              <option value="">Choisir…</option>
+              <option>Testament</option>
+              <option>Mandat de protection</option>
+              <option>Achat ou vente d’une propriété</option>
+              <option>Hypothèque ou refinancement</option>
+              <option>Mariage ou contrat de mariage</option>
+              <option>Union de fait / union parentale</option>
+              <option>Succession</option>
+              <option>Homologation / régime de protection</option>
+              <option>Entreprise</option>
+              <option>Autre</option>
+            </select>
+          </label>
+          <label class="field">Moment préféré
+            <select name="moment">
+              <option>Peu importe</option>
+              <option>En matinée</option>
+              <option>En après-midi</option>
+            </select>
+          </label>
+          <label class="field full">Quelques mots sur votre situation
+            <textarea name="message" rows="4" maxlength="800"></textarea>
+            <small>N’inscrivez aucun renseignement sensible (NAS, numéros de compte, état de santé). On en discutera de vive voix.</small>
+          </label>
+        </div>
+
+        <div class="form-step">
+          <span class="label">03 — Vos coordonnées</span>
+          <label class="field">Nom complet *
+            <input type="text" name="nom" required autocomplete="name" maxlength="120">
+          </label>
+          <label class="field">Téléphone *
+            <input type="tel" name="telephone" required autocomplete="tel" maxlength="30" pattern="[0-9 ()+.\-]{7,30}">
+          </label>
+          <label class="field full">Courriel *
+            <input type="email" name="courriel" required autocomplete="email" maxlength="160">
+          </label>
+          <label class="hp" aria-hidden="true">Ne pas remplir<input type="text" name="site_web" tabindex="-1" autocomplete="off"></label>
+        </div>
+
+        <div class="consent">
+          <span class="label">04 — Consentement (Loi 25)</span>
+          <label class="check">
+            <input type="checkbox" name="consent_traitement" required>
+            <span>* J’accepte que Notaires Alma recueille mes nom, téléphone, courriel et la description de ma demande <strong>dans le seul but de fixer un rendez-vous et de me recontacter</strong>. Ces renseignements sont accessibles uniquement aux notaires et au personnel de l’étude, ne sont jamais vendus ni partagés, et sont conservés au plus 12 mois si aucun mandat n’est confié.</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="consent_infolettre">
+            <span>Facultatif — J’accepte de recevoir à l’occasion les conseils juridiques de l’étude par courriel. Je peux me désabonner en tout temps.</span>
+          </label>
+          <p class="fine">Vous pouvez en tout temps demander l’accès à vos renseignements, leur rectification ou leur suppression, ou retirer votre consentement, en écrivant à <a href="mailto:bvilleneuve@notarius.net">bvilleneuve@notarius.net</a>. Voir notre <a href="/confidentialite.html">politique de confidentialité</a>.</p>
+          <p class="form-error" data-error hidden role="alert"></p>
+          <button class="btn btn--dark" type="submit" style="align-self: flex-start">Envoyer ma demande <span aria-hidden="true">↗</span></button>
+        </div>
+      </form>
     </div>
-  </div>
-  <div class="contact-map" data-reveal="up">
-    <iframe title="Carte" src="https://maps.google.com/maps?q=401%20avenue%20Du%20Pont%20Nord%2C%20Alma%2C%20QC%20G8B%205E4&amp;z=15&amp;output=embed" loading="lazy"></iframe>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div class="footer-col"><div class="footer-label">Bureau</div>401, Avenue Du Pont Nord<br>Alma, (Quebec) G8B 5E4</div>
-    <div class="footer-col"><div class="footer-label">Vos notaires</div><a href="/bianka.html">Me Bianka Villeneuve</a><a href="/alexandre.html">Me Alexandre Demers-Bergeron</a></div>
-    <div class="footer-col"><div class="footer-label">Téléphone</div><a href="tel:4186683118" class="footer-phone">(418) 668-3118</a></div>
-  </div>
-  <div class="footer-logo"><span class="footer-logo-bg"><img src="/images/logo-bianka-villeneuve.png" alt="Bianka Villeneuve Notaire"></span></div>
-  <div class="footer-large">Vos <em>notaires</em></div>
-  <div class="footer-bottom">
-    <span>Copyright © 2026 · Bianka Villeneuve Notaire</span>
-    <a href="#" data-action="toTop">Retour en haut ↑</a>
-  </div>
-</footer>
-
-<script type="module" src="/src/main.js"></script>
+  </section>
+</main>
+<!-- @footer -->
 </body>
 </html>
