@@ -85,12 +85,17 @@ h1, h2, h3 { margin: 0; }
 /* ---------- En-tête ---------- */
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--ink); }
 .site-header__inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--gut); display: flex; align-items: stretch; justify-content: space-between; gap: 0 24px; }
-.brand { display: flex; align-items: center; gap: 14px; padding: 14px 0; color: var(--ink); text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 14px; padding: 8px 0; color: var(--ink); text-decoration: none; }
 .brand__plume { width: 92px; height: 33px; flex: none; transform: rotate(-8deg); }
 .brand__text { display: flex; flex-direction: column; gap: 6px; }
 .brand__sub { font-family: var(--f-logo); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-text); line-height: 1; padding-top: 6px; border-top: 1px solid var(--gilt); }
 .brand__name { font-family: var(--f-logo); font-weight: 600; font-size: 24px; letter-spacing: 0.06em; line-height: 1; }
 .brand__name span { color: var(--gold-text); }
+.brand__logo { display: block; height: 86px; width: auto; }
+.head-tel { display: flex; align-items: center; gap: 10px; margin-left: auto; padding: 0 20px; color: var(--gold-text); text-decoration: none; font-family: var(--f-logo); font-weight: 700; font-size: 19px; letter-spacing: .02em; white-space: nowrap; }
+.head-tel:hover { color: var(--gold); }
+.head-tel__ico { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--gold-text); flex: none; }
+.head-tel__ico svg { width: 17px; height: 17px; fill: #fff; }
 .nav { display: flex; align-items: stretch; font-size: 14px; font-weight: 500; }
 .nav a { display: flex; align-items: center; padding: 0 16px; color: var(--ink); text-decoration: none; border-left: 1px solid var(--hair); transition: background .2s, color .2s; }
 .nav a:hover { background: var(--paper-tint); color: var(--gold-text); }
@@ -359,15 +364,19 @@ body { overflow-x: clip; }
 @media (max-width: 560px) {
   .site-header__inner { gap: 0 12px; }
   .brand { gap: 10px; }
-  .brand__plume { width: 64px; height: 23px; }
-  .brand__name { font-size: 18px; }
-  .brand__sub { font-size: 8px; letter-spacing: .12em; }
+  .brand__logo { height: 58px; }
+  .head-tel { padding: 0 10px; }
+  .head-tel__num { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .menu-btn { padding: 0 12px; }
   .menu-btn > span:last-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 }
 
 /* ---------- Hero : les deux notaires (accueil) ---------- */
-.duo { position: relative; flex: 1.15 1 520px; min-width: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ink); min-height: clamp(560px, 62vw, 820px); border-left: 1px solid var(--ink); }
+.split--hero .split__text { flex: 1 1 520px; gap: 24px; padding-top: clamp(36px, 4.5vw, 72px); padding-bottom: clamp(36px, 4.5vw, 72px); }
+.split--hero .hero-foot { grid-template-columns: 1fr; gap: 20px; }
+.split--hero .btn-stack { flex-direction: row; flex-wrap: wrap; }
+.split--hero .hero-foot .btn { min-width: 0; }
+.duo { position: relative; flex: 1.6 1 640px; min-width: 0; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(10px, 1.2vw, 18px); padding: clamp(10px, 1.2vw, 18px); background: var(--paper-alt); min-height: clamp(560px, 52vw, 760px); border-left: 1px solid var(--ink); }
 .duo__tile { position: relative; display: block; overflow: hidden; background: var(--paper-alt); color: #fff; text-decoration: none; }
 .duo__tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
 .duo__tile:hover img { transform: scale(1.03); }
