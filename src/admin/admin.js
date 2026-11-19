@@ -22,7 +22,7 @@ const icon = (d) => {
   const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
   p.setAttribute('d', d); svg.append(p); return svg;
 };
-const brand = () => h('div', { class: 'adm-brand' }, h('span', { class: 'brand__mark' }, plume()),
+const brand = () => h('div', { class: 'adm-brand' }, plume(),
   h('span', { class: 'brand__text' }, h('span', { class: 'brand__sub' }, 'Administration'), h('span', { class: 'brand__name' }, 'NOTAIRES ', h('span', {}, 'ALMA'))));
 
 /* ---------- Connexion ---------- */

@@ -105,7 +105,10 @@ export function downloadCsv(filename, rows, columns) {
 export const plume = () => {
   const ns = 'http://www.w3.org/2000/svg';
   const svg = document.createElementNS(ns, 'svg');
-  svg.setAttribute('viewBox', '0 0 220 640'); svg.setAttribute('aria-hidden', 'true');
-  svg.innerHTML = '<g transform="rotate(18 110 320)" fill="none" stroke-linecap="round"><path fill="#A8904C" d="M101 500 C46 452 26 330 52 222 C70 146 108 72 150 14 C182 92 196 196 176 306 C162 384 136 448 104 492 Z"/><path stroke="#2E2B25" stroke-width="9" d="M101 495 C103 380 110 250 150 14 M50 356 l34 -10 M174 232 l-34 16 M168 328 l-28 12"/><path stroke="#A8904C" stroke-width="10" d="M96 632 C97 580 99 540 101 495"/></g>';
+  svg.setAttribute('viewBox', '0 0 420 150'); svg.setAttribute('aria-hidden', 'true'); svg.setAttribute('class', 'brand__plume');
+  svg.innerHTML = '<defs><linearGradient id="adm-plume-grad" x1="0" y1="0" x2="1" y2="0.25"><stop offset="0" stop-color="#D23A78"/><stop offset=".45" stop-color="#9E0D47"/><stop offset=".78" stop-color="#4A0820"/><stop offset="1" stop-color="#0E0A0C"/></linearGradient></defs>'
+    + '<path fill="url(#adm-plume-grad)" d="M62 112 C70 86 92 62 128 46 L122 34 C150 28 182 26 214 32 L232 20 C236 30 238 34 240 38 C300 50 364 74 414 104 C384 98 352 96 320 97 L330 106 C300 104 270 104 240 105 L250 113 C204 112 160 112 120 113 C96 114 78 114 62 112 Z"/>'
+    + '<path fill="none" stroke="#FBE3EC" stroke-opacity=".8" stroke-width="2" stroke-linecap="round" d="M66 111 C160 98 280 92 412 104"/>'
+    + '<g transform="translate(64 112) rotate(158)"><path fill="#141114" stroke="#B49872" stroke-width="1.2" d="M0 -8 L44 -5 C50 -3 54 0 62 0 C54 0 50 3 44 5 L0 8 Z"/></g>';
   return svg;
 };

@@ -8,19 +8,20 @@
 @import '@fontsource/herr-von-muellerhoff/index.css';
 
 :root {
-  --ink: #1E1C18;          /* texte */
-  --dark: #2E2B25;         /* carré du logo, aplats */
-  --line-dark: #4A463C;
-  --gold: #A8904C;         /* plume (décor, grands textes) */
-  --gold-text: #7A6630;    /* or lisible sur blanc */
-  --gold-light: #D9C48A;   /* or sur fond foncé */
+  --ink: #141114;          /* texte (noir du logo) */
+  --dark: #1C1418;         /* aplats foncés */
+  --line-dark: #3E2A33;
+  --gold: #B0245E;         /* magenta de la plume (décor) */
+  --gold-text: #7A1238;    /* bordeaux du logo, lisible sur blanc */
+  --gold-light: #F0A9C4;   /* rose sur fond foncé */
+  --gilt: #B49872;         /* filet doré du logo */
   --paper: #FFFFFF;
-  --paper-alt: #F6F3EC;
-  --paper-tint: #F4EFE1;
-  --muted: #5C574C;
-  --body-soft: #3E3A32;
-  --hair: #E8E3D6;
-  --disabled: #C9C2B2;
+  --paper-alt: #F8F3EE;
+  --paper-tint: #F8ECF0;
+  --muted: #5E5459;
+  --body-soft: #3F363B;
+  --hair: #EDE3E4;
+  --disabled: #CDBFC4;
 
   --f-display: 'Archivo Variable', 'Arial Narrow', sans-serif;
   --f-body: 'Inter Tight Variable', system-ui, sans-serif;
@@ -85,10 +86,9 @@ h1, h2, h3 { margin: 0; }
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--ink); }
 .site-header__inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--gut); display: flex; align-items: stretch; justify-content: space-between; gap: 0 24px; }
 .brand { display: flex; align-items: center; gap: 14px; padding: 14px 0; color: var(--ink); text-decoration: none; }
-.brand__mark { width: 52px; height: 60px; background: var(--dark); display: grid; place-items: center; flex: none; }
-.brand__mark svg { width: 26px; height: 50px; }
+.brand__plume { width: 92px; height: 33px; flex: none; transform: rotate(-8deg); }
 .brand__text { display: flex; flex-direction: column; gap: 6px; }
-.brand__sub { font-family: var(--f-logo); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-text); line-height: 1; }
+.brand__sub { font-family: var(--f-logo); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-text); line-height: 1; padding-top: 6px; border-top: 1px solid var(--gilt); }
 .brand__name { font-family: var(--f-logo); font-weight: 600; font-size: 24px; letter-spacing: 0.06em; line-height: 1; }
 .brand__name span { color: var(--gold-text); }
 .nav { display: flex; align-items: stretch; font-size: 14px; font-weight: 500; }
@@ -127,7 +127,8 @@ h1, h2, h3 { margin: 0; }
 .site-footer .btn { margin-top: 6px; }
 .site-footer .btn--gold { color: var(--ink); }
 .site-footer__word { position: relative; display: flex; align-items: flex-end; gap: clamp(16px, 2.4vw, 36px); line-height: 0.8; }
-.site-footer__word svg { width: clamp(40px, 6vw, 88px); height: clamp(116px, 17vw, 256px); flex: none; }
+.site-footer__word { flex-wrap: wrap; }
+.site-footer__word svg { width: clamp(120px, 16vw, 240px); height: clamp(43px, 5.7vw, 86px); flex: none; transform: rotate(-10deg); align-self: center; }
 .site-footer__big { font-family: var(--f-display); font-stretch: 125%; font-weight: 800; font-size: clamp(52px, 11vw, 168px); letter-spacing: -0.02em; text-transform: uppercase; white-space: nowrap; }
 .site-footer__script { position: absolute; right: 2%; bottom: -8%; font-family: var(--f-script); font-size: clamp(80px, 15vw, 230px); color: var(--gold-light); transform: rotate(-6deg); }
 .site-footer__legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 20px 0 28px; border-top: 1px solid var(--line-dark); font-size: 13px; color: var(--gold-light); }
@@ -137,8 +138,8 @@ h1, h2, h3 { margin: 0; }
 .split__text { flex: 1 1 560px; min-width: 0; padding: clamp(40px, 6vw, 96px) clamp(20px, 4vw, 64px); display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
 .split__media { flex: 1 1 440px; min-width: 0; min-height: clamp(460px, 60vw, 760px); position: relative; overflow: hidden; background: var(--paper-alt); }
 .split__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.split__media .plume-deco { position: absolute; color: #fff; width: 280px; height: 820px; left: -60px; top: -40px; transform: rotate(-22deg); opacity: .85; pointer-events: none; }
-.split__badge { position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; padding: 24px 28px; color: #fff; background: linear-gradient(transparent, rgba(30,28,24,.72)); }
+.split__media .plume-deco { position: absolute; color: #fff; width: 520px; height: 186px; right: -120px; bottom: 40px; transform: rotate(-14deg); opacity: .8; pointer-events: none; }
+.split__badge { position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; padding: 24px 28px; color: #fff; background: linear-gradient(transparent, rgba(20,17,20,.72)); }
 .split__badge small { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
 .big-num { font-family: var(--f-display); font-stretch: 125%; font-weight: 700; font-size: 44px; line-height: .9; text-align: right; }
 .big-num small { display: block; font-size: 13px; font-weight: 500; font-stretch: 100%; letter-spacing: .06em; text-transform: uppercase; margin-top: 6px; }
@@ -182,7 +183,7 @@ h1, h2, h3 { margin: 0; }
 .panel + .panel { border-left: 1px solid #fff; }
 .panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
 .panel:hover img { transform: scale(1.03); }
-.panel__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 32px; display: flex; flex-direction: column; gap: 8px; background: linear-gradient(transparent, rgba(30,28,24,.78) 55%); }
+.panel__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 32px; display: flex; flex-direction: column; gap: 8px; background: linear-gradient(transparent, rgba(20,17,20,.78) 55%); }
 .panel__cap .script { font-size: clamp(64px, 6vw, 88px); color: var(--gold-light); line-height: .8; }
 .panel__name { font-family: var(--f-display); font-stretch: 125%; font-weight: 700; font-size: clamp(28px, 3.4vw, 48px); text-transform: uppercase; line-height: 1; letter-spacing: -.02em; }
 .panel__meta { display: flex; justify-content: space-between; gap: 16px; font-size: 15px; margin-top: 8px; }
@@ -220,7 +221,7 @@ h1, h2, h3 { margin: 0; }
 
 /* Citation */
 .quote { position: relative; overflow: hidden; }
-.quote .plume-deco { position: absolute; color: var(--line-dark); width: 320px; height: 930px; left: -40px; top: -60px; transform: rotate(-16deg); pointer-events: none; }
+.quote .plume-deco { position: absolute; color: var(--line-dark); width: 900px; height: 322px; right: -160px; top: -40px; transform: rotate(-10deg); pointer-events: none; }
 .quote figure { position: relative; margin: 0; display: flex; flex-direction: column; gap: 40px; }
 .quote blockquote { margin: 0; font-family: var(--f-display); font-stretch: 112%; font-weight: 600; font-size: clamp(26px, 3.8vw, 56px); line-height: 1.08; letter-spacing: -.02em; text-transform: uppercase; max-width: 1100px; }
 .quote figcaption { border-bottom: 1px solid var(--gold-light); padding-bottom: 10px; max-width: 520px; font-family: var(--f-script); font-size: clamp(60px, 7vw, 84px); line-height: .7; color: var(--gold-light); }
@@ -319,8 +320,8 @@ fieldset.form-step legend { float: left; width: 100%; padding: 0; margin-bottom:
 .choice { position: relative; display: flex; gap: 14px; align-items: center; padding: 12px; min-height: 88px; border: 1px solid var(--disabled); cursor: pointer; transition: border-color .2s, background .2s; }
 .choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .choice img, .choice__mark { width: 64px; height: 64px; object-fit: cover; flex: none; }
-.choice__mark { background: var(--dark); display: grid; place-items: center; }
-.choice__mark svg { width: 24px; height: 48px; }
+.choice__mark { background: var(--paper-tint); display: grid; place-items: center; }
+.choice__mark svg { width: 56px; height: 20px; }
 .choice b { display: block; font-size: 16px; }
 .choice small { font-size: 13px; color: var(--muted); }
 .choice:hover { border-color: var(--ink); }
@@ -358,8 +359,7 @@ body { overflow-x: clip; }
 @media (max-width: 560px) {
   .site-header__inner { gap: 0 12px; }
   .brand { gap: 10px; }
-  .brand__mark { width: 42px; height: 50px; }
-  .brand__mark svg { width: 22px; height: 42px; }
+  .brand__plume { width: 64px; height: 23px; }
   .brand__name { font-size: 18px; }
   .brand__sub { font-size: 8px; letter-spacing: .12em; }
   .menu-btn { padding: 0 12px; }
@@ -372,7 +372,7 @@ body { overflow-x: clip; }
 .duo__tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
 .duo__tile:hover img { transform: scale(1.03); }
 .duo__tile:hover { color: #fff; }
-.duo__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 64px 20px 20px; display: flex; flex-direction: column; gap: 6px; background: linear-gradient(transparent, rgba(30,28,24,.8)); }
+.duo__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 64px 20px 20px; display: flex; flex-direction: column; gap: 6px; background: linear-gradient(transparent, rgba(20,17,20,.8)); }
 .duo__name { font-family: var(--f-display); font-stretch: 112%; font-weight: 700; font-size: clamp(17px, 1.6vw, 24px); line-height: 1.1; text-transform: uppercase; letter-spacing: -.01em; }
 .duo__badge { position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: var(--dark); color: var(--gold-light); padding: 14px 20px 12px; text-align: center; font-family: var(--f-display); font-stretch: 125%; font-weight: 800; font-size: 34px; line-height: .9; }
 .duo__badge small { display: block; font-family: var(--f-body); font-weight: 500; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; margin-top: 6px; color: #fff; }
@@ -382,3 +382,7 @@ body { overflow-x: clip; }
   @keyframes tile-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 }
 @media (max-width: 700px) { .duo { min-height: 440px; border-left: 0; } .duo__cap { padding: 48px 12px 14px; } }
+
+/* Paraphe (boucle d’encre du logo) */
+.paraphe { display: block; width: min(100%, 440px); height: auto; aspect-ratio: 600 / 120; color: var(--gold-text); }
+.paraphe--light { color: var(--gold-light); }
