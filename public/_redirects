@@ -1,0 +1,19 @@
+# Anciennes adresses de biankavilleneuvenotaire.com (WordPress) → nouvelles pages
+/accueil                 /                     301
+/accueil/                /                     301
+/a-propos                /bianka.html          301
+/a-propos/               /bianka.html          301
+/nous-joindre            /contact.html         301
+/nous-joindre/           /contact.html         301
+/services                /services.html        301
+/services/               /services.html        301
+/services-personnalises  /services.html        301
+/services-personnalises/ /services.html        301
+/engagement              /bianka.html          301
+/feed/*                  /                     301
+/wp-admin/*              /                     301
+/wp-content/*            /                     301
+/wp-json/*               /                     301
+
+# Toute autre adresse inconnue → accueil (jamais de « page introuvable »)
+/*                       /                     301
