@@ -426,7 +426,7 @@ body { overflow-x: clip; }
 @media (max-width: 560px) { .toc--tiles { grid-template-columns: 1fr; } }
 
 /* Tous les textes justifiés (paragraphes, citations, listes, descriptions), avec césure */
-main, .site-footer {
+main {
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
