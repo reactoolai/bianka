@@ -424,3 +424,14 @@ body { overflow-x: clip; }
   .toc--tiles .toc__text { grid-column: auto; grid-row: auto; }
 }
 @media (max-width: 560px) { .toc--tiles { grid-template-columns: 1fr; } }
+
+/* Paragraphes de description : texte justifié, avec césure pour éviter les trous */
+main p:not(.script):not(.honorific):not(.label):not(.form-error):not(.kicker),
+.toc__text {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 7 3 3;
+}
+.chapter__head .display--s { font-size: clamp(24px, 2.1vw, 32px); overflow-wrap: break-word; }
