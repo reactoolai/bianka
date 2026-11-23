@@ -359,7 +359,7 @@ fieldset.form-step legend { float: left; width: 100%; padding: 0; margin-bottom:
 .choice:has(.touched:invalid) { border-color: #A2341F; }
 .hero-title { margin-bottom: clamp(28px, 3.4vw, 56px); }
 .display { overflow-wrap: normal; hyphens: manual; }
-@media (max-width: 480px) { .display--xl { font-size: 44px; } .hero-title .script, .script--tag { font-size: 52px; } }
+@media (max-width: 480px) { .display--xl { font-size: min(44px, 10.2vw); } .hero-title .script, .script--tag { font-size: 52px; } }
 body { overflow-x: clip; }
 @media (max-width: 560px) {
   .site-header__inner { gap: 0 12px; }
@@ -425,13 +425,19 @@ body { overflow-x: clip; }
 }
 @media (max-width: 560px) { .toc--tiles { grid-template-columns: 1fr; } }
 
-/* Paragraphes de description : texte justifié, avec césure pour éviter les trous */
-main p:not(.script):not(.honorific):not(.label):not(.form-error):not(.kicker),
-.toc__text {
+/* Tous les textes justifiés (paragraphes, citations, listes, descriptions), avec césure */
+main, .site-footer {
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
   -webkit-hyphens: auto;
   hyphenate-limit-chars: 7 3 3;
 }
+/* … sauf les titres, étiquettes, boutons et éléments décoratifs */
+:where(main, .site-footer) :where(h1, h2, h3, h4, h5, h6, .display, .script, .honorific, .label, .kicker, .btn, button, input, select, textarea, figcaption, .chip, .toc__num, .toc__title, .toc__arrow, .sign__line, .stats strong, .duo__name, .panel__name, .member__num) {
+  text-align: left;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+}
 .chapter__head .display--s { font-size: clamp(24px, 2.1vw, 32px); overflow-wrap: break-word; }
+.quote blockquote { hyphens: manual; -webkit-hyphens: manual; }
