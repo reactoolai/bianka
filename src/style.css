@@ -395,3 +395,10 @@ body { overflow-x: clip; }
 /* Paraphe (boucle d’encre du logo) */
 .paraphe { display: block; width: min(100%, 440px); height: auto; aspect-ratio: 600 / 120; color: var(--gold-text); }
 .paraphe--light { color: var(--gold-light); }
+
+/* Contact : deux courriels dans une même cellule */
+.contact-cells .mail-line { display: flex; flex-direction: column; gap: 2px; padding: 0; border: 0; min-height: 0; text-decoration: none; color: var(--ink); overflow-wrap: anywhere; }
+.contact-cells .mail-line small { font-size: 13px; color: var(--muted); }
+.contact-cells .mail-line span { font-family: var(--f-body); font-weight: 600; font-size: clamp(14px, 1.08vw, 16px); }
+.contact-cells .mail-line:hover span { color: var(--gold-text); }
+.btn { overflow-wrap: anywhere; }

@@ -43,29 +43,10 @@
       </div>
 
       <form data-form="rendez_vous" novalidate>
-        <fieldset class="form-step">
-          <legend class="label">01 — Votre notaire *</legend>
-          <div class="full" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; margin-top: 14px">
-            <label class="choice">
-              <input type="radio" name="notaire" value="bianka" required>
-              <img src="/images/bianka-villeneuve.jpg" alt="" style="object-position: 50% 15%">
-              <span><b>Me Bianka Villeneuve</b><small>Notaire associée</small></span>
-            </label>
-            <label class="choice">
-              <input type="radio" name="notaire" value="alexandre">
-              <img src="/images/Alexandre.jpg" alt="" style="object-position: 50% 20%">
-              <span><b>Me Alexandre Demers-Bergeron</b><small>Notaire</small></span>
-            </label>
-            <label class="choice">
-              <input type="radio" name="notaire" value="indifferent">
-              <span class="choice__mark"><svg aria-hidden="true"><use href="#plume-pleine"/></svg></span>
-              <span><b>Le premier disponible</b><small>Délai le plus court</small></span>
-            </label>
-          </div>
-        </fieldset>
+        <input type="hidden" name="notaire" value="indifferent">
 
         <div class="form-step">
-          <span class="label">02 — Votre besoin</span>
+          <span class="label">01 — Votre besoin</span>
           <label class="field">Motif *
             <select name="motif" required>
               <option value="">Choisir…</option>
@@ -95,7 +76,7 @@
         </div>
 
         <div class="form-step">
-          <span class="label">03 — Vos coordonnées</span>
+          <span class="label">02 — Vos coordonnées</span>
           <label class="field">Nom complet *
             <input type="text" name="nom" required autocomplete="name" maxlength="120">
           </label>
@@ -109,7 +90,7 @@
         </div>
 
         <div class="consent">
-          <span class="label">04 — Consentement (Loi 25)</span>
+          <span class="label">03 — Consentement (Loi 25)</span>
           <label class="check">
             <input type="checkbox" name="consent_traitement" required>
             <span>* J’accepte que Notaires Alma recueille mes nom, téléphone, courriel et la description de ma demande <strong>dans le seul but de fixer un rendez-vous et de me recontacter</strong>. Ces renseignements sont accessibles uniquement aux notaires et au personnel de l’étude, ne sont jamais vendus ni partagés, et sont conservés au plus 12 mois si aucun mandat n’est confié.</span>

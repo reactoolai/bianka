@@ -59,7 +59,8 @@ function mailtoFallback(table, p) {
 function prefill(form) {
   const q = new URLSearchParams(location.search);
   const n = q.get('notaire');
-  if (n) form.querySelector(`input[name="notaire"][value="${CSS.escape(n)}"]`)?.click();
+  const hid = form.querySelector('input[type="hidden"][name="notaire"]');
+  if (n && hid && NOTAIRES[n]) hid.value = n;
   const m = q.get('motif');
   if (m) {
     const sel = form.querySelector('select[name="motif"]');
@@ -110,7 +111,7 @@ export function initForms() {
       }
       if (table === 'rendez_vous') {
         const t = done.querySelector('[data-done-text]');
-        if (t) t.textContent = `Votre demande pour ${NOTAIRES[payload.notaire]} a bien été transmise. Nous vous contacterons sous peu pour confirmer la date et l’heure.`;
+        if (t) t.textContent = 'Votre demande a bien été transmise. Nous vous contacterons sous peu pour confirmer la date et l’heure.';
       }
       form.reset();
       form.hidden = true;
