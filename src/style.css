@@ -441,3 +441,24 @@ main, .site-footer {
 }
 .chapter__head .display--s { font-size: clamp(24px, 2.1vw, 32px); overflow-wrap: break-word; }
 .quote blockquote { hyphens: manual; -webkit-hyphens: manual; }
+
+/* Accueil : photo des deux notaires réunis */
+.duo--photo { grid-template-columns: 1fr; }
+.duo--photo .duo__tile { margin: 0; }
+.duo--photo .duo__badge { left: auto; right: clamp(10px, 1.2vw, 18px); transform: none; }
+.duo__cap--pair { flex-direction: row; justify-content: space-between; align-items: flex-end; gap: 20px; padding: 90px clamp(16px, 2vw, 28px) clamp(16px, 2vw, 24px); }
+.duo__cap--pair a { display: flex; flex-direction: column; gap: 6px; color: #fff; text-decoration: none; }
+.duo__cap--pair a:last-child { text-align: right; align-items: flex-end; }
+.duo__cap--pair a:hover .duo__name { color: var(--gold-light); }
+@media (max-width: 700px) { .duo--photo { min-height: 0; aspect-ratio: 1374 / 1145; } .duo__cap--pair { padding-top: 56px; } .duo__cap--pair .duo__name { font-size: 14px; } }
+
+/* Équipe : photo de groupe */
+.team-photo { margin: 0 auto clamp(48px, 6vw, 88px); max-width: 1180px; padding: 0 var(--gut); }
+.team-photo img { display: block; width: 100%; height: auto; border: 1px solid var(--ink); }
+@media (max-width: 700px) {
+  .duo--photo .duo__badge { font-size: 22px; padding: 8px 12px 7px; }
+  .duo--photo .duo__badge small { font-size: 8px; margin-top: 4px; }
+  .duo__cap--pair { padding: 40px 12px 12px; gap: 12px; }
+  .duo__cap--pair .label { display: none; }
+  .duo__cap--pair .duo__name { font-size: 12px; }
+}
