@@ -58,3 +58,13 @@ if (faq && filters) {
 document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
 initForms();
+
+// Carte (page Contact) : Leaflet chargé seulement à l'approche de la carte
+const mapEl = document.querySelector('[data-map]');
+if (mapEl) {
+  const load = () => import('./map.js').then((m) => m.initMap(mapEl));
+  if ('IntersectionObserver' in window) {
+    const mo = new IntersectionObserver((en) => { if (en[0].isIntersecting) { mo.disconnect(); load(); } }, { rootMargin: '400px' });
+    mo.observe(mapEl);
+  } else load();
+}
