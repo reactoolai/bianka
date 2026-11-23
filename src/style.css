@@ -512,3 +512,15 @@ a[href^="mailto:"] { hyphens: none; -webkit-hyphens: none; overflow-wrap: anywhe
 }
 .site-footer__addr { color: inherit; text-decoration: none; display: inline-block; line-height: 1.6; }
 .site-footer__addr:hover { color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Secteurs desservis (Services) ---------- */
+.territoire { display: flex; flex-direction: column; gap: clamp(28px, 4vw, 48px); }
+.territoire__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 28px clamp(20px, 3vw, 40px); }
+.territoire__grp { border-top: 1px solid rgba(20,17,20,.15); padding-top: 14px; }
+.territoire__grp h3 { margin: 0 0 10px; text-align: left; }
+.territoire__grp ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; font-size: 14px; text-align: left; }
+.territoire__grp li { padding: 3px 10px; border-radius: 999px; background: var(--paper-tint); color: var(--ink); }
+.territoire__cta { margin: 0; color: var(--body-soft); }
+.territoire__cta a { color: var(--gold-text); font-weight: 600; white-space: nowrap; }
+.site-footer__zone { margin: 0; padding: 20px 0 0; font-size: 13px; line-height: 1.6; color: var(--gold-light); opacity: .85; max-width: 980px; }
+.site-footer__zone a { text-decoration: underline; color: inherit; }
