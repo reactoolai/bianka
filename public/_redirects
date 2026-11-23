@@ -1,3 +1,9 @@
+# Ancien domaine (alias Bolt) → domaine principal, en gardant la sous-page
+https://biankavilleneuvenotaire.com/*      https://notairealma.com/:splat  301!
+http://biankavilleneuvenotaire.com/*       https://notairealma.com/:splat  301!
+https://www.biankavilleneuvenotaire.com/*  https://notairealma.com/:splat  301!
+http://www.biankavilleneuvenotaire.com/*   https://notairealma.com/:splat  301!
+
 # Anciennes adresses de biankavilleneuvenotaire.com (WordPress) → nouvelles pages
 /accueil                 /                     301
 /accueil/                /                     301
