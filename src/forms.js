@@ -4,6 +4,8 @@
 import { supabase, supabaseReady } from './lib/supabase.js';
 
 const ETUDE_COURRIEL = 'bvilleneuve@notarius.net';
+// Copie conforme des demandes de rendez-vous
+const RDV_CC = 'alexandredemersbergeron@notarius.net';
 const NOTAIRES = {
   bianka: 'Me Bianka Villeneuve',
   alexandre: 'Me Alexandre Demers-Bergeron',
@@ -47,13 +49,14 @@ function buildPayload(table, form) {
 }
 
 function mailtoFallback(table, p) {
-  const subject = table === 'rendez_vous'
-    ? `Demande de rendez-vous — ${p.motif} — ${NOTAIRES[p.notaire] || ''}`
-    : `Message du site — ${p.nom}`;
-  const body = table === 'rendez_vous'
-    ? `Notaire : ${NOTAIRES[p.notaire]}\nMotif : ${p.motif}\nMoment préféré : ${p.moment || '—'}\n\n${p.message || ''}\n\nNom : ${p.nom}\nTéléphone : ${p.telephone}\nCourriel : ${p.courriel}\n\nConsentement Loi 25 donné.`
+  const rdv = table === 'rendez_vous';
+  const pref = rdv && p.notaire && p.notaire !== 'indifferent' ? `Préférence : ${NOTAIRES[p.notaire]}\n` : '';
+  const subject = rdv ? `Demande de rendez-vous — ${p.motif}` : `Message du site — ${p.nom}`;
+  const body = rdv
+    ? `Motif : ${p.motif}\n${pref}Moment préféré : ${p.moment || '—'}\n\n${p.message || ''}\n\nNom : ${p.nom}\nTéléphone : ${p.telephone}\nCourriel : ${p.courriel}\n\nConsentement Loi 25 donné.`
     : `${p.message}\n\nNom : ${p.nom}\nCourriel : ${p.courriel}\n\nConsentement Loi 25 donné.`;
-  window.location.href = `mailto:${ETUDE_COURRIEL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const cc = rdv ? `&cc=${encodeURIComponent(RDV_CC)}` : '';
+  window.location.href = `mailto:${ETUDE_COURRIEL}?subject=${encodeURIComponent(subject)}${cc}&body=${encodeURIComponent(body)}`;
 }
 
 function prefill(form) {
