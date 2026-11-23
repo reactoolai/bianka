@@ -402,3 +402,25 @@ body { overflow-x: clip; }
 .contact-cells .mail-line span { font-family: var(--f-body); font-weight: 600; font-size: clamp(14px, 1.08vw, 16px); }
 .contact-cells .mail-line:hover span { color: var(--gold-text); }
 .btn { overflow-wrap: anywhere; }
+
+/* Services de l'accueil : carreaux sur deux lignes */
+.toc--tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--ink); border: 1px solid var(--ink); }
+.toc--tiles li { border: 0; background: var(--paper); display: flex; }
+.toc--tiles a { position: relative; flex: 1; display: flex; flex-direction: column; gap: 14px; padding: clamp(22px, 2.2vw, 32px); min-height: clamp(240px, 21vw, 300px); overflow: hidden; }
+.toc--tiles a:hover { padding: clamp(22px, 2.2vw, 32px); background: var(--paper-tint); }
+.toc--tiles .toc__title { font-size: clamp(22px, 1.9vw, 28px); }
+.toc--tiles .toc__num { text-align: left; align-self: flex-start; }
+.toc--tiles .toc__text { flex: 1; }
+.toc--tiles .toc__arrow { align-self: flex-end; text-align: right; }
+.toc--tiles .toc__cta { background: var(--dark); }
+.toc--tiles .toc__cta a { color: #fff; }
+.toc--tiles .toc__cta a:hover { background: var(--ink); }
+.toc--tiles .toc__cta .toc__num, .toc--tiles .toc__cta .toc__arrow { color: var(--gold-light); }
+.toc--tiles .toc__cta .toc__text { color: var(--hair); }
+.toc__plume { position: absolute; right: -40px; bottom: 18px; width: 220px; height: 79px; color: var(--gold-light); opacity: .22; transform: rotate(-12deg); pointer-events: none; }
+@media (max-width: 1100px) { .toc--tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 760px) {
+  .toc--tiles a { display: flex; min-height: 0; }
+  .toc--tiles .toc__text { grid-column: auto; grid-row: auto; }
+}
+@media (max-width: 560px) { .toc--tiles { grid-template-columns: 1fr; } }
