@@ -113,10 +113,12 @@ export function initForms() {
       btn.innerHTML = label;
       if (error) {
         console.error(error);
-        const status = error.context?.status;
-        showError(status === 429
-          ? 'Trop de demandes envoyées. Réessayez plus tard ou appelez-nous au (418) 668-3118.'
-          : 'L’envoi n’a pas fonctionné. Réessayez ou appelez-nous au (418) 668-3118.');
+        if (error.context?.status === 429) {
+          showError('Trop de demandes envoyées. Réessayez plus tard ou appelez-nous au (418) 668-3118.');
+          return;
+        }
+        // Le serveur ne répond pas : on ouvre le courriel pré-rempli pour ne perdre aucune demande.
+        mailtoFallback(table, payload);
         return;
       }
       if (table === 'rendez_vous') {

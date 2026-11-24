@@ -97,7 +97,8 @@ Deno.serve(async (req) => {
   // Copie de sauvegarde dans la base (si la table existe ; un échec n'empêche pas le courriel).
   try {
     const url = Deno.env.get('SUPABASE_URL');
-    const key = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+    let key = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
+    if (!key) { try { key = JSON.parse(Deno.env.get('SUPABASE_SECRET_KEYS') || '{}').default; } catch { /* rien */ } }
     if (url && key) {
       const { error } = await createClient(url, key).from(type).insert(ligne);
       if (error) console.error('insert', error.message);
