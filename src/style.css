@@ -524,3 +524,5 @@ a[href^="mailto:"] { hyphens: none; -webkit-hyphens: none; overflow-wrap: anywhe
 .territoire__cta a { color: var(--gold-text); font-weight: 600; white-space: nowrap; }
 .site-footer__zone { margin: 0; padding: 20px 0 0; font-size: 13px; line-height: 1.6; color: var(--gold-light); opacity: .85; max-width: 980px; }
 .site-footer__zone a { text-decoration: underline; color: inherit; }
+.site-footer__credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.site-footer__credit a:hover { color: #fff; }
