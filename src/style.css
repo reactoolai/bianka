@@ -526,3 +526,7 @@ a[href^="mailto:"] { hyphens: none; -webkit-hyphens: none; overflow-wrap: anywhe
 .site-footer__zone a { text-decoration: underline; color: inherit; }
 .site-footer__credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .site-footer__credit a:hover { color: #fff; }
+.site-footer__social { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.site-footer__social a { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--line-dark); border-radius: 999px; font-size: 13px; }
+.site-footer__social a:hover { border-color: var(--gold-light); }
+.site-footer__social svg { width: 15px; height: 15px; fill: currentColor; }
