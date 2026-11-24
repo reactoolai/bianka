@@ -1,5 +1,6 @@
 /* Formulaires publics : rendez-vous et contact.
-   - Avec Supabase : enregistrement sécurisé (insertion seulement, RLS).
+   - Avec Supabase : la fonction serveur « envoyer-demande » filtre les robots,
+     enregistre la demande et l'envoie par courriel (Resend).
    - Sans Supabase : ouvre un courriel pré-rempli vers l'étude (repli). */
 import { supabase, supabaseReady } from './lib/supabase.js';
 
@@ -79,6 +80,7 @@ export function initForms() {
     const errorEl = form.querySelector('[data-error]');
     const btn = form.querySelector('button[type="submit"]');
     prefill(form);
+    const debut = Date.now();
 
     const showError = (msg) => { errorEl.textContent = msg; errorEl.hidden = !msg; };
 
@@ -104,12 +106,17 @@ export function initForms() {
       btn.disabled = true;
       const label = btn.innerHTML;
       btn.textContent = 'Envoi en cours…';
-      const { error } = await supabase.from(table).insert(payload);
+      const { error } = await supabase.functions.invoke('envoyer-demande', {
+        body: { ...payload, type: table, site_web: form.querySelector('input[name="site_web"]')?.value || '', duree_ms: Date.now() - debut },
+      });
       btn.disabled = false;
       btn.innerHTML = label;
       if (error) {
         console.error(error);
-        showError('L’envoi n’a pas fonctionné. Réessayez ou appelez-nous au (418) 668-3118.');
+        const status = error.context?.status;
+        showError(status === 429
+          ? 'Trop de demandes envoyées. Réessayez plus tard ou appelez-nous au (418) 668-3118.'
+          : 'L’envoi n’a pas fonctionné. Réessayez ou appelez-nous au (418) 668-3118.');
         return;
       }
       if (table === 'rendez_vous') {
