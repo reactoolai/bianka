@@ -100,8 +100,7 @@ function gabarit(apercu: string, corps: string) {
         <div style="font-size:20px;font-weight:800;color:#ffffff;letter-spacing:-0.01em">Reactool<span style="color:${CYAN}">.AI</span></div>
       </td>
     </tr></table></a>
-    <div style="margin-top:10px;font-family:${FONT};font-size:13px;line-height:1.5;color:#9FB3C8">Des sites et des outils Web pour les entreprises d’ici, créés avec l’IA.</div>
-    <div style="margin-top:8px"><a href="https://reactool.ai" style="font-family:${FONT};font-size:13px;font-weight:600;color:${CYAN};text-decoration:none">reactool.ai →</a></div>
+    <div style="margin-top:12px"><a href="https://reactool.ai" style="font-family:${FONT};font-size:13px;font-weight:600;color:${CYAN};text-decoration:none">reactool.ai →</a></div>
   </td></tr>
 
   <tr><td align="center" style="padding:16px 16px 0;font-family:${FONT};font-size:11px;line-height:1.6;color:#a3958c">Courriel automatique envoyé depuis notairealma.com.</td></tr>
