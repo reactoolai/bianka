@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 
 const pages = [
   'index', 'bianka', 'alexandre', 'equipe', 'services',
-  'rendez-vous', 'faq', 'contact', 'confidentialite', 'admin',
+  'rendez-vous', 'faq', 'contact', 'confidentialite', 'secteurs-desservis', 'admin',
   // anciennes adresses : redirections vers les nouvelles pages
   'services-personnalises', 'engagement',
 ];
